@@ -54,7 +54,7 @@ TODO: Add links to the container images
 ### Audio Output
 
 * MaryTTS - text to speech - Wifi/LAN
-* Audio amplifier (ESP & Max98357 or other I2S based DAC & amplifier chips) - Wifi
+* Wifi speaker (ESP32 & Max98357) - Wifi
 * <s>Simple buzzer (ESP & TODO Buzzer) - Wifi</s> fail, due to very bad sound quality!
 * TODO: Media Player ?
 * TODO: Rhasspy ?
@@ -64,13 +64,13 @@ TODO: Add links to the container images
 * Sonoff "SNZB-03" x2 - PIR - Zigbee
 * TODO: mmWave (ESP & LD2410) - Wifi
 
-### Climate/Ambient (Outdoor)
+### Weather
 
 * OpenWeatherMap - Internet
 * Flughafen Nürnberg - Internet
 * TODO: Xiaomi Aqara "WSDCGQ11LM" temperature, humidity & air pressure sensor - put in waterproof case on windows sill outside?
 
-### Climate/Ambient (Indoor)
+### Indoor Climate Sensors
 
 * Xiaomi "LYWSD03MMC" x10 - temperature & humidity sensor with LCD - BLE
 * Xiaomi Aqara "WSDCGQ11LM" temperature & humidity & air pressure sensor - Zigbee
@@ -91,11 +91,11 @@ TODO: Add links to the container images
 
 ### Door / Window Sensor
 
-* Sonoff "SNZB-04" door / window sensor - Zigbee
+* Sonoff "SNZB-04" - door / window sensor - Zigbee
 
 ### Display
 
-* LCD character display (ESP & 20x04 display) - Wifi
+* LCD 20x4 character display (ESP & 2004 display) - Wifi
 * TODO: Android tablet as display? - Wifi
 
 ### Computer (over Wifi or LAN)
@@ -103,7 +103,7 @@ TODO: Add links to the container images
 * HASS.Agent - Windows client
 * Home Assistant - Android client
 * Ping - sensor
-* Web page - sensor (web page available)
+* Web page - sensor (is web page available?)
 * Printer - sensor (e.g. toner level)
 * SNMP - sensor (e.g. printer page count)
 * [Wake-on-LAN](Wake_on_LAN.md) (WoL) - actor
