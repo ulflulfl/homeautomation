@@ -53,9 +53,9 @@ TODO: Add links to the container images
 
 ### Audio Output
 
-* MaryTTS - text to speech - Wifi/LAN
-* Wifi speaker (ESP32 & Max98357) - Wifi
-* <s>Simple buzzer (ESP & TODO Buzzer) - Wifi</s> fail, due to very bad sound quality!
+* MaryTTS - text to speech engine - Wifi/LAN
+* [MAX98357 Media Player](MAX98357_Media_Player.md) - Wifi speaker (ESP32 & MAX98357) - Wifi
+* <s>Rtttl buzzer (ESP & Rtttl Buzzer) - Wifi</s> fail, due to very bad sound quality!
 * TODO: Media Player ?
 * TODO: Rhasspy ?
 
@@ -68,13 +68,14 @@ TODO: Add links to the container images
 
 * OpenWeatherMap - Internet
 * Flughafen Nürnberg - Internet
-* TODO: Xiaomi Aqara "WSDCGQ11LM" temperature, humidity & air pressure sensor - put in waterproof case on windows sill outside?
+* TODO: Xiaomi Aqara "WSDCGQ11LM" temperature, humidity & air pressure sensor - put in waterproof case on window sill outside?
 
-### Indoor Climate Sensors
+### Sensors
 
 * Xiaomi "LYWSD03MMC" x10 - temperature & humidity sensor with LCD - BLE
 * Xiaomi Aqara "WSDCGQ11LM" temperature & humidity & air pressure sensor - Zigbee
 * Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
+* Sonoff "SNZB-04" - door / window sensor - Zigbee
 * Bosch "BMP280" - air pressure & temperature sensor (ESP & BMP280) - Wifi
 * <s>Inkbird IBS-TH1 Plus - BLE</s> fail, due to unreliable data transfer!
 * TODO: Adafruit "LTR390" -  UV and ambient light sensor (ESP & LTR390) - Wifi
@@ -88,10 +89,6 @@ TODO: Add links to the container images
 * <s>IKEA STYRBAR "E2001/E2002" - quad button - Zigbee</s> unused
 * Tuya Smart Knob "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee
 * Aqara Magic Cube "MFKZQ01LM" - various actions - Zigbee
-
-### Door / Window Sensor
-
-* Sonoff "SNZB-04" - door / window sensor - Zigbee
 
 ### Display
 
@@ -121,6 +118,7 @@ TODO: Add links to the container images
 * TODO: Calendar / workday based alarm clock
 * TODO: Window Cover
 * TODO: Aqara "SJCGQ11LM" water sensor - Zigbee
+* TODO: Bed occupancy sensor (ESP & HX711 based scale) - Wifi
 
 -------------------------------
 
