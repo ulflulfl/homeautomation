@@ -40,16 +40,29 @@ TODO: Add links to the container images
 * IKEA "LED1924G9" - TRÅDFRI 806 lm RGB - Zigbee
 * WLED (ESP & WS2812B) - Wifi
 
-### Occupancy
-
-* Sonoff "SNZB-03" x2 - PIR - Zigbee
-* TODO: mmWave (ESP & LD2410) - Wifi
-
 ### Mains Voltage "Plugs"
 
 * Tuya "TS011F_plug_1" x3 - plug with voltage, power, ... measurements - Zigbee
 * Lidl "HG06337" - plug without measurements - Zigbee
 * Peacefair PZEM-004T mains measurement (ESP & PZEM-004T-V3) - Wifi
+
+### Heating & Cooling
+
+* TODO: Xiaomi "Mi Smart Standing Fan 2 EU" - Wifi
+* <s>Earu/TuYa "TV02" Radiator Valve</s> fail, just doesn't work - Zigbee
+
+### Audio Output
+
+* MaryTTS - text to speech - Wifi/LAN
+* Audio amplifier (ESP & Max98357 or other I2S based DAC & amplifier chips) - Wifi
+* <s>Simple buzzer (ESP & TODO Buzzer) - Wifi</s> fail, due to very bad sound quality!
+* TODO: Media Player ?
+* TODO: Rhasspy ?
+
+### Occupancy
+
+* Sonoff "SNZB-03" x2 - PIR - Zigbee
+* TODO: mmWave (ESP & LD2410) - Wifi
 
 ### Climate/Ambient (Outdoor)
 
@@ -68,19 +81,6 @@ TODO: Add links to the container images
 * TODO: "BH1750" - ambient light sensor (ESP & BH1750) - Wifi
 * TODO: Doostman AirCO2ntrol - CO2 sensor (ESP & AirCO2ntrol) - Wifi
 
-### Heating & Cooling
-
-* TODO: Xiaomi "Mi Smart Standing Fan 2 EU" - Wifi
-* <s>Earu/TuYa "TV02" Radiator Valve</s> fail, just doesn't work - Zigbee
-
-### Audio Output
-
-* MaryTTS - text to speech - Wifi/LAN
-* Audio amplifier (ESP & Max98357 or other I2S based DAC & amplifier chips) - Wifi
-* <s>Simple buzzer (ESP & TODO Buzzer) - Wifi</s> fail, due to very bad sound quality!
-* TODO: Media Player ?
-* TODO: Rhasspy ?
-
 ### Buttons & Input
 
 * Xiaomi Wireless Switch "WXKG01LM" - single button - Zigbee
@@ -89,9 +89,9 @@ TODO: Add links to the container images
 * Tuya Smart Knob "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee
 * Aqara Magic Cube "MFKZQ01LM" - various actions - Zigbee
 
-### Contact
+### Door / Window Sensor
 
-* Sonoff "SNZB-04" door / window contact - Zigbee
+* Sonoff "SNZB-04" door / window sensor - Zigbee
 
 ### Display
 
