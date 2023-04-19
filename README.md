@@ -36,54 +36,66 @@ TODO: Add links to the container images
 
 ### Lighting
 
-* Wandschalter - Zigbee
-* IKEA TRÅDFRI RGB - Zigbee
+* 3A (Nue) "HGZB-41" - wall switch - Zigbee
+* IKEA "LED1924G9" - TRÅDFRI 806 lm RGB - Zigbee
 * WLED (ESP & WS2812B) - Wifi
 
 ### Occupancy
 
-* Sonoff PIR - Zigbee
+* Sonoff "SNZB-03" x2 - PIR - Zigbee
 * TODO: mmWave (ESP & LD2410) - Wifi
 
-### Mains Voltage
+### Mains Voltage "Plugs"
 
-* Tuya Mains Plug - Zigbee
-* PZEM mains measurement (ESP & PZEM-004T-V3) - Wifi
+* Tuya "TS011F_plug_1" x3 - plug with voltage, power, ... measurements - Zigbee
+* Lidl "HG06337" - plug without measurements - Zigbee
+* Peacefair PZEM-004T mains measurement (ESP & PZEM-004T-V3) - Wifi
 
-### Climate (Outdoor)
+### Climate/Ambient (Outdoor)
 
 * OpenWeatherMap - Internet
 * Flughafen Nürnberg - Internet
-* TODO: Mi temp&hum in waterproof case ? - Zigbee
+* TODO: Xiaomi Aqara "WSDCGQ11LM" temperature, humidity & air pressure sensor - put in waterproof case on windows sill outside?
 
-### Climate (Indoor)
+### Climate/Ambient (Indoor)
 
-* Mi LYWSD03MMC Temperature & Humidity - BLE
-* Mi Temp&Hum&Pressure - Zigbee
-* <s>Inkbird - BLE</s> fail due to unreliable data transfer!
-* TODO: UV and ambient light (ESP & TODO) - Wifi
-* TODO: Ambient Light (ESP & BH1750) - Wifi
-* TODO: Mi Fan (TODO: own category?) - Wifi
-* TODO: CO2 (ESP & CO2 TODO) - Wifi
+* Xiaomi "LYWSD03MMC" x10 - temperature & humidity sensor with LCD - BLE
+* Xiaomi Aqara "WSDCGQ11LM" temperature & humidity & air pressure sensor - Zigbee
+* Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
+* Bosch "BMP280" - air pressure & temperature sensor (ESP & BMP280) - Wifi
+* <s>Inkbird IBS-TH1 Plus - BLE</s> fail, due to unreliable data transfer!
+* TODO: Adafruit "LTR390" -  UV and ambient light sensor (ESP & LTR390) - Wifi
+* TODO: "BH1750" - ambient light sensor (ESP & BH1750) - Wifi
+* TODO: Doostman AirCO2ntrol - CO2 sensor (ESP & AirCO2ntrol) - Wifi
+
+### Heating & Cooling
+
+* TODO: Xiaomi "Mi Smart Standing Fan 2 EU" - Wifi
+* <s>Earu/TuYa "TV02" Radiator Valve</s> fail, just doesn't work - Zigbee
 
 ### Audio Output
 
-* MaryTTS - Wifi/LAN
-* Audio amplifier (ESP & Max98357 or other I2S amplifier chips) - Wifi
-* <s>Simple buzzer (ESP & TODO Buzzer) - Wifi</s> fail due to very bad sound quality!
+* MaryTTS - text to speech - Wifi/LAN
+* Audio amplifier (ESP & Max98357 or other I2S based DAC & amplifier chips) - Wifi
+* <s>Simple buzzer (ESP & TODO Buzzer) - Wifi</s> fail, due to very bad sound quality!
 * TODO: Media Player ?
 * TODO: Rhasspy ?
 
-### Buttons
+### Buttons & Input
 
-* Mi Wireless Switch - single button - Zigbee
-* IKEA TRÅDFRI - double button - Zigbee
-* IKEA STYRBAR - quad button - Zigbee
-* Tuya Smart Knob - button & rotary encoder - Zigbee
+* Xiaomi Wireless Switch "WXKG01LM" - single button - Zigbee
+* IKEA TRÅDFRI "E1743" - double button - Zigbee
+* <s>IKEA STYRBAR "E2001/E2002" - quad button - Zigbee</s> unused
+* Tuya Smart Knob "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee
+* Aqara Magic Cube "MFKZQ01LM" - various actions - Zigbee
+
+### Contact
+
+* Sonoff "SNZB-04" door / window contact - Zigbee
 
 ### Display
 
-* LCD character display (ESP & 2004 display) - Wifi
+* LCD character display (ESP & 20x04 display) - Wifi
 * TODO: Android tablet as display? - Wifi
 
 ### Computer (over Wifi or LAN)
@@ -95,19 +107,20 @@ TODO: Add links to the container images
 * Printer - sensor (e.g. toner level)
 * SNMP - sensor (e.g. printer page count)
 * [Wake-on-LAN](Wake_on_LAN.md) (WoL) - actor
-* <s>Speedtest - sensor</s> fail!
-* TODO: System Monitor
+* <s>Speedtest - sensor</s> fail, no response!
+* TODO: Windows / Linux - System Monitor
 
-### Unsorted / TODO
+### Unsorted TODO
 
 * TODO: Rhasspy Voice Control
-* Mi Scale - body scale
+* TODO: Mi Body Composition Scale 2 - body scale
 * TODO: NFC
 * TODO: Infrared - IR-control in/out
 * TODO: OctoPrint ?
 * TODO: VideoCam input
-* TODO: Calendar / workday
+* TODO: Calendar / workday based alarm clock
 * TODO: Window Cover
+* TODO: Aqara "SJCGQ11LM" water sensor - Zigbee
 
 -------------------------------
 
