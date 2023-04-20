@@ -4,7 +4,7 @@
 
 ### Hardware
 
-* Chuwi Herobox - Intel Gemini LakeJ4125, 8 GB RAM, 256 GB SSD
+* Chuwi Herobox - Intel Gemini Lake J4125, 8 GB RAM, 256 GB SSD, fanless
 * Sonoff "ZBDongle-P" ZigBee USB Stick - with 2m USB expansion cable to avoid interferences
 
 ### Software
@@ -54,7 +54,7 @@ TODO: Add links to the container images
 ### Audio Output
 
 * MaryTTS - text to speech engine - Wifi/LAN
-* [MAX98357 Media Player](MAX98357_Media_Player.md) - Wifi speaker (ESP32 & MAX98357) - Wifi
+* [MAX98357 Media Player](MAX98357_Media_Player.md) - DIY Wifi speaker (ESP32 & MAX98357) - Wifi
 * <s>Rtttl buzzer (ESP & Rtttl Buzzer) - Wifi</s> fail, due to very bad sound quality!
 * TODO: Media Player ?
 * TODO: Rhasspy ?
@@ -77,7 +77,7 @@ TODO: Add links to the container images
 * Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
 * Sonoff "SNZB-04" - door / window sensor - Zigbee
 * Bosch "BMP280" - air pressure & temperature sensor (ESP & BMP280) - Wifi
-* <s>Inkbird IBS-TH1 Plus - BLE</s> fail, due to unreliable data transfer!
+* <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - BLE</s> - fail, due to unreliable data transfer!
 * TODO: Adafruit "LTR390" -  UV and ambient light sensor (ESP & LTR390) - Wifi
 * TODO: "BH1750" - ambient light sensor (ESP & BH1750) - Wifi
 * TODO: Doostman AirCO2ntrol - CO2 sensor (ESP & AirCO2ntrol) - Wifi
