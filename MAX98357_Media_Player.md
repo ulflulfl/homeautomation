@@ -1,8 +1,8 @@
 # MAX98357 Media Player
 
-How to build a WiFi connected mono loudspeaker (aka: media player) with an ESP32, a MAX98357 and a speaker.
+How to build a **WiFi connected mono loudspeaker (aka: media player)** with an ESP32, a MAX98357 and a speaker.
 
-*State (2023.04): Speaker works just fine, the sound quality is good. Sometimes looses connection to home assistant, need to find out why ...*
+*State (2023.04): Speaker works and the sound quality is good. Works fine for radio and text-to-speech, but probably not as a "party boombox". Sometimes looses connection to home assistant, need to find out why ...*
 
 ![MAX98357 based box](images/MAX98357_box.jpg)
 *My 30+ year old Heco box -> my new Wifi connected and USB powered media player*
@@ -17,10 +17,11 @@ Media player basics: https://esphome.io/components/media_player/index.html#
 ## Hardware
 ### I2S
 
-I2S "Inter-IC Sound" is used to connect the ESP32 microcontroller with audio chips: https://en.wikipedia.org/wiki/I%C2%B2S
-I2S is available on the ESP32 only, an ESP8266 won't work.
+I2S "Inter-IC Sound" https://en.wikipedia.org/wiki/I%C2%B2S is used to connect the ESP32 microcontroller with audio chips. I2S is available on the ESP32 only, an ESP8266 won't work.
 
-The ESPHome "I2S Audio Media Player" can use different I2S DACs (e.g. NS4168 or UDA1334A), I've used an easily available MAX98357: https://esphome.io/components/media_player/i2s_audio.html
+The ESPHome "I2S Audio Media Player" https://esphome.io/components/media_player/i2s_audio.html can use different I2S chips (e.g. MAX98357, NS4168 or UDA1334A), I've used an easily available MAX98357.
+
+All these chips contain a DAC https://en.wikipedia.org/wiki/Digital-to-analog_converter; a class D amplifier https://en.wikipedia.org/wiki/Class-D_amplifier and some other components in a single chip. 
 
 The ESP32 internal DAC (8 bit) seems a bit noisy: https://community.home-assistant.io/t/esphome-i2s-media-player-internal-dac/434280 so this was not an option for me.
 
@@ -59,6 +60,12 @@ The board defaults to mono (sum of left and right). It can be set to "left only"
 ![MAX98357 media player](images/MAX98357_media_player.jpg)
 *ESP32 and MAX98357 boards connected - USB 5V powered - grey and white wires towards the loudspeaker*
 
+### Power Supply
+
+I supply the ESP32 with 5V from a small USB power adapter (phone charger) and connect the ESP32 5V pins with the MAX board (red and black wires).
+
+As I'm using the box for "low volume" radio and alike, this works just fine. However, I haven't tested this as a "party boombox" ;-)
+
 ### The box
 I had an old unused set of Heco boxes (4Ω) around that I've bought already used 30+ years ago. They served me well for car stereo in my very first car - a [Renault 12](https://en.wikipedia.org/wiki/Renault_12). 
 
@@ -90,3 +97,5 @@ Be careful to use the correct pin numbers. I'm using a nodemcu board, the pin nu
 ### Home Assistant
 
 Once the ESP32 is set up and powered on, the "ESPHome I2S Media Player" simply appears in Home Assistant.
+
+Obviously, you need to have the ESPHome integration installed.
