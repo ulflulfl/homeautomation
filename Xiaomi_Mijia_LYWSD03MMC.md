@@ -40,11 +40,12 @@ As I don't own a "known good thermometer", I've compared several of the devices 
 
 For the price point, the results are really ok for me!
 
+--------
 ## Flash the Firmware
 
 Flashing a custom firmware is straightforward, which makes life in ESPHome easy.
 
-Not sure if the original firmware directly connects to ESPHome or Home Assistant (e.g. using a bluetooth USB dongle?). I haven't done any experiments in that direction and just flashed a custom firmware ...
+Not sure if the original firmware directly connects to ESPHome or Home Assistant (e.g. using a bluetooth USB dongle?). I haven't done any experiments in that direction and just flashed the custom firmware ...
 
 ### ATC or pvvx firmware?
 
@@ -96,6 +97,7 @@ https://github.com/atc1441/ATC_MiThermometer/issues/256 (in the issues link you'
 
 When the battery is really low, the display shows strange things.
 
+--------
 ## ESPHome
 
 Only the ESP32 supports BLE, so the ESP8266 won't work here.
@@ -131,7 +133,7 @@ sensor:
 
 Hint: Spend some thoughts to set the names "correct" at the first time, changing them later causes some effort in Home Assistant. 
 
-### Home Assistant
+## Home Assistant
 
 The values should appear in home assistant with an entity-id of e.g. *sensor.flur_temperatur* (derived from the name "Flur Temperatur") without further intervention. 
 
