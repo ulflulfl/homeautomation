@@ -92,7 +92,7 @@ TODO: Add links to the container images
 
 ### Display
 
-* LCD 20x4 character display (ESP & 2004 display) - Wifi
+* [LCD Character Display](LCD_Character_Display.md) 20x4 (ESP & 2004 display) - Wifi
 * TODO: Android tablet as display? - Wifi
 
 ### Computer (over Wifi or LAN)
