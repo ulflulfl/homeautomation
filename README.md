@@ -72,12 +72,12 @@ TODO: Add links to the container images
 
 ### Sensors
 
-* Xiaomi "LYWSD03MMC" x10 - temperature & humidity sensor with LCD - BLE
+* [Xiaomi Mijia "LYWSD03MMC"](Xiaomi_Mijia_LYWSD03MMC.md) x10 - temperature & humidity sensor with LCD - BLE
 * Xiaomi Aqara "WSDCGQ11LM" temperature & humidity & air pressure sensor - Zigbee
 * Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
 * Sonoff "SNZB-04" - door / window sensor - Zigbee
 * Bosch "BMP280" - air pressure & temperature sensor (ESP & BMP280) - Wifi
-* <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - BLE</s> - fail, due to unreliable data transfer!
+* <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - temperature & humidity sensor with LCD - BLE</s> - fail, due to unreliable data transfer!
 * TODO: Adafruit "LTR390" -  UV and ambient light sensor (ESP & LTR390) - Wifi
 * TODO: "BH1750" - ambient light sensor (ESP & BH1750) - Wifi
 * TODO: Doostman AirCO2ntrol - CO2 sensor (ESP & AirCO2ntrol) - Wifi
