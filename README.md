@@ -86,13 +86,13 @@ TODO: Add links to the container images
 
 * Xiaomi Wireless Switch "WXKG01LM" - single button - Zigbee
 * IKEA TRÅDFRI "E1743" - double button - Zigbee
-* <s>IKEA STYRBAR "E2001/E2002" - quad button - Zigbee</s> unused
-* Tuya Smart Knob "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee
-* Aqara Magic Cube "MFKZQ01LM" - various actions - Zigbee
+* <s>IKEA STYRBAR "E2002" - quad button - Zigbee</s> unused
+* [Tuya Smart Knob](Tuya_Smart_Knob.md) "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee
+* Xiaomi Aqara Cube "MFKZQ01LM" - various actions - Zigbee
 
 ### Display
 
-* [LCD Character Display](LCD_Character_Display.md) 20x4 (ESP & 2004 display) - Wifi
+* [LCD Character Display](LCD_Character_Display.md) 20x4 (ESP, PCF8574 & display) - Wifi
 * TODO: Android tablet as display? - Wifi
 
 ### Computer (over Wifi or LAN)
@@ -117,7 +117,7 @@ TODO: Add links to the container images
 * TODO: VideoCam input
 * TODO: Calendar / workday based alarm clock
 * TODO: Window Cover
-* TODO: Aqara "SJCGQ11LM" water sensor - Zigbee
+* TODO: Xiaomi Aqara "SJCGQ11LM" water sensor - Zigbee
 * TODO: Bed occupancy sensor (ESP & HX711 based scale) - Wifi
 
 -------------------------------
