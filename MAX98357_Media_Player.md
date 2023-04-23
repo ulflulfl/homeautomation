@@ -41,8 +41,6 @@ Aliexpress: Board with "connectors" ~3€ (2023.02)
 ![MAX98357 board](images/MAX98357_board.jpg)
 *MAX98357 board*
 
-https://circuitdigest.com/microcontroller-projects/esp32-based-internet-radio-using-max98357a-i2s-amplifier-board
-
 Connect the MAX98357 to an ESP32 board:
 
 | MAX | color | ESP |
@@ -54,6 +52,8 @@ Connect the MAX98357 to an ESP32 board:
 | DIN | green | 25 |
 | BCLK | yellow | 27 |
 | LRC | white | 26 |
+
+More infos about connecting the hardware: https://circuitdigest.com/microcontroller-projects/esp32-based-internet-radio-using-max98357a-i2s-amplifier-board
 
 The board defaults to mono (sum of left and right). It can be set to "left only" or "right only" with the SD pin. The gain can be adjusted with the GAIN pin. However, I haven't done experiments with those pins. More information how to use these pins can be found in the datasheet. 
 
@@ -80,6 +80,26 @@ Integrating the electronics was quite easy, the parts are held in place with som
 ### ESPHome Code
 
 https://esphome.io/components/media_player/i2s_audio.html
+https://esphome.io/components/i2s_audio.html
+
+**Beware! Breaking change in: https://esphome.io/changelog/2023.4.0.html**
+
+Since 2023.4.0:
+
+```
+i2s_audio:
+  i2s_lrclk_pin: GPIO26
+  i2s_bclk_pin: GPIO27
+
+media_player:
+  - platform: i2s_audio
+    name: ESPHome I2S Media Player
+    dac_type: external
+    i2s_dout_pin: GPIO25
+    mode: mono
+```
+
+Before 2023.4.0:
 
 ```
 media_player:
