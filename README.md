@@ -38,18 +38,18 @@ TODO: Add links to the container images
 
 * 3A (Nue) "HGZB-41" - wall switch - Zigbee
 * IKEA "LED1924G9" - TRÅDFRI 806 lm RGB - Zigbee
-* WLED (ESP & WS2812B) - Wifi
+* WLED - DIY RGB light (ESP & WS2812B) - Wifi
 
 ### Mains Voltage "Plugs"
 
 * Tuya "TS011F_plug_1" x3 - plug with voltage, power, ... measurements - Zigbee
 * Lidl "HG06337" - plug without measurements - Zigbee
-* Peacefair PZEM-004T mains measurement (ESP & PZEM-004T-V3) - Wifi
+* Peacefair PZEM-004T - DIY mains measurement (ESP & PZEM-004T-V3) - Wifi
 
 ### Heating & Cooling
 
 * TODO: Xiaomi "Mi Smart Standing Fan 2 EU" - Wifi
-* <s>Earu/TuYa "TV02" Radiator Valve</s> fail, just doesn't work - Zigbee
+* <s>Earu/TuYa "TV02" Radiator Valve - Zigbee</s> fail, even the valve alone just doesn't work
 
 ### Audio Output
 
@@ -62,7 +62,7 @@ TODO: Add links to the container images
 ### Occupancy
 
 * Sonoff "SNZB-03" x2 - PIR - Zigbee
-* TODO: mmWave (ESP & LD2410) - Wifi
+* TODO: LD2140 - DIY microwave "mmWave" presence detection (ESP & LD2410) - Wifi
 
 ### Weather
 
@@ -76,11 +76,11 @@ TODO: Add links to the container images
 * Xiaomi Aqara "WSDCGQ11LM" temperature & humidity & air pressure sensor - Zigbee
 * Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
 * Sonoff "SNZB-04" - door / window sensor - Zigbee
-* Bosch "BMP280" - air pressure & temperature sensor (ESP & BMP280) - Wifi
+* Bosch "BMP280" - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi
 * <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - temperature & humidity sensor with LCD - BLE</s> - fail, due to unreliable data transfer!
-* TODO: Adafruit "LTR390" -  UV and ambient light sensor (ESP & LTR390) - Wifi
-* TODO: "BH1750" - ambient light sensor (ESP & BH1750) - Wifi
-* TODO: Doostman AirCO2ntrol - CO2 sensor (ESP & AirCO2ntrol) - Wifi
+* TODO: Adafruit "LTR390" -  DIY UV and ambient light sensor (ESP & LTR390) - Wifi
+* TODO: "BH1750" - DIY ambient light sensor (ESP & BH1750) - Wifi
+* TODO: Doostman AirCO2ntrol - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
 
 ### Buttons & Input
 
@@ -92,7 +92,7 @@ TODO: Add links to the container images
 
 ### Display
 
-* [LCD Character Display](LCD_Character_Display.md) 20x4 (ESP, PCF8574 & display) - Wifi
+* [LCD Character Display](LCD_Character_Display.md) - DIY 20x4 char display (ESP, PCF8574 & display) - Wifi
 * TODO: Android tablet as display? - Wifi
 
 ### Computer (over Wifi or LAN)
