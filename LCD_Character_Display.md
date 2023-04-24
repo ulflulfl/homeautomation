@@ -10,21 +10,31 @@ Soldering the display and attach some wires is pretty easy. However, programming
 ## Hardware
 
 ![LCD 20x4 character display and ESP32, powered by USB](images/LCD_char.jpg)
-
-*LCD 20x4 character display attached over I2C to an ESP32 with ESPHome firmware.*
+*LCD 20x4 character display attached over I2C to an ESP32 with ESPHome firmware*
 
 These character LCDs (based on the Hitachi HD44780 design) are available in different sizes (8x2, 16x2, 20x2, 20x4, ...) and very common for decades now. They usually have a backlight, are pretty cheap and tons of infos can be found on the internet about it. However, displaying graphics is VERY limited and the displays are monochrom only.
-
-By using a cheap PCF8574 board, the number of wires to the display can be reduced from up to 16 down to 4, it contains a potentiometer to adjust the contrast and a transistor to switch the backlight on or off.
 
 Further infos:
 https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller
 https://pro-it.rocks/20x4-lcd-display-with-data-from-homeassistant-using-esphome/
 https://randomnerdtutorials.com/esp32-esp8266-i2c-lcd-arduino-ide/
 
+### PCF8574 board
+
+![PCF8574 board](images/PCF8574.jpg)
+*PCF8574 board that eases the display setup*
+
+The inexpensive PCF8574 board provides:
+* I2C to display pins (only 4 wires instead of up to 16 needed)
+* potentiometer to adjust the display contrast
+* switch backlight on/off remotely
+* disable backlight altogether with a jumper
+* I2C address default is 0x27
+* optional: I2C address selection using "solder dots" (A0, A1, A2)
+
 ### Bill of Material
-* LCD Display 2004 (20*4 characters - other sizes will also work)
-* PCF8574 board (for easier I2C connection)
+* LCD display 2004 (20*4 characters - other sizes will also work)
+* PCF8574 board
 * ESP32 or ESP8266 board
 * USB power supply and USB cable (most ESP boards will have micro USB connectors)
 * Four female/female jumper wires
@@ -34,26 +44,27 @@ Display: Aliexpress 1-3€ (~2022, price depends on the "row and column size")
 PCF8574: Aliexpress <1€ (~2022)
 
 ### Connections
-Solder the PCF8574 board to the back of the display (using pin header connectors would also be possible, but takes more space):
+Solder the small PCF8574 board to the back of the display (using pin header connectors would also be possible, but takes more space):
 
-![LCD_char_back.jpg](images/LCD_char_back.jpg)
+![Connections to the LCD](images/LCD_char_back.jpg)
+*Connections to the LCD*
 
 The display needs 5V while the ESP32 works with 3.3V. However, connecting the LCD to the 5V USB input voltage and directly connect the SCL/SDA I2C lines works just fine.
 
-Four connections using some jumper wires:
+Four (jumper) wires needed to connect the ESP to the EDD:
 
 | ESP | LCD | |
 | ----------- | ----------- | ----------- |
+| GND | GND |
 | VIN, VCC or 5V | VCC | 5V from USB, not 3.3V! |
-| GND | GND | 
 | GPIO21 | SDA |
-| GPIO22 | SCL | 
+| GPIO22 | SCL |
 
-Hint: The 5V supply pin on the ESP board is marked with different names (VIN, VCC, 5V, ...) by the manufacturers. It's a good idea to measure the suspected pin that it actually provides 5V.
+Hint: The 5V supply pin on the ESP board is marked with different names (VIN, VCC, 5V, ...) by the manufacturers. It's a good idea to measure the suspected pin on the ESP board that it actually provides 5V.
 
 You can connect several I2C devices (not only one LCD) to the I2C bus, just connect the four wires in parallel to the next device. To avoid address conflicts, you can change the I2C address on the PCF board using a solder dot connecting the panels marked A0, A1 and A2 accordingly.
 
-TODO: Write a dedicated I2C page with max. wire lengths, adressing, ... 
+TODO: Write a dedicated I2C page with max. wire lengths, adressing, ...
 
 --------------------
 ### ESPHome yaml file
