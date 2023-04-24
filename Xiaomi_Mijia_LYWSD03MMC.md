@@ -19,13 +19,13 @@ Aliexpress ~6€ (2023.02)
 
 Some links with additional infos:
 
-https://www.youtube.com/watch?v=K-HG7qs9hK0
-https://blog.quindorian.org/2020/10/4-xiaomi-temperature-sensor-for-home-assistant.html/
-https://hackaday.com/2020/12/08/exploring-custom-firmware-on-xiaomi-thermometers/
+* https://www.youtube.com/watch?v=K-HG7qs9hK0
+* https://blog.quindorian.org/2020/10/4-xiaomi-temperature-sensor-for-home-assistant.html/
+* https://hackaday.com/2020/12/08/exploring-custom-firmware-on-xiaomi-thermometers/
 
 ## BLE Range
 
-Using an ESP32 as a "BLE to WiFi bridge" is working ok for all the BLE devices in my flat. Between the ESP32 and any of the LYWSD03MMC there is a maximum distance of around 5m and two walls/doors 
+Using an ESP32 as a "BLE to WiFi bridge" is working ok for all the BLE devices in my flat. Between the ESP32 and any of the LYWSD03MMC there is a maximum distance of around 5m and two walls/doors
 
 However, the connection to one LYWSD03MMC in the basement failed (slightly higher distance plus the additional floor/ceiling). I had to place a second ESP32 in my flat closer to the LYWSD03MMC (reducing the distance to 1-2m plus floor/ceiling) which is working fine now.
 
@@ -36,7 +36,7 @@ The accuracy is listed in the user manual (±0.1°C and ±1% RH), but that's pro
 ![LYWSD03MMC_15_times.jpg](images/LYWSD03MMC_15_times.jpg)
 *Fitfteen LYWSD03MMC after running a few hours at the same spot ...*
 
-As I don't own a "known good thermometer", I've compared several of the devices to check at least the variance. The first row was bought 2022.02 and was already running for a few weeks. The remaining ten were bought 2023.02 and were fresh out of the box. All were using the custom ATC firmware. The temperature variance of 0.2 °C looks pretty good. The humidity variance of 3% is ok for me. Of course, an absolute error can't be detected this way and the long term stability is yet another question ... 
+As I don't own a "known good thermometer", I've compared several of the devices to check at least the variance. The first row was bought 2022.02 and was already running for a few weeks. The remaining ten were bought 2023.02 and were fresh out of the box. All were using the custom ATC firmware. The temperature variance of 0.2 °C looks pretty good. The humidity variance of 3% is ok for me. Of course, an absolute error can't be detected this way and the long term stability is yet another question ...
 
 For the price point, the results are really ok for me!
 
@@ -131,10 +131,10 @@ sensor:
       name: "Flur Signal"
 ```
 
-Hint: Spend some thoughts to set the names "correct" at the first time, changing them later causes some effort in Home Assistant. 
+Hint: Spend some thoughts to set the names "correct" at the first time, changing them later causes some effort in Home Assistant.
 
 ## Home Assistant
 
-The values should appear in home assistant with an entity-id of e.g. *sensor.flur_temperatur* (derived from the name "Flur Temperatur") without further intervention. 
+The values should appear in home assistant with an entity-id of e.g. *sensor.flur_temperatur* (derived from the name "Flur Temperatur") without further intervention.
 
 Obviously, you need to have the ESPHome integration installed.
