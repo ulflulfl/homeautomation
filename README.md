@@ -27,12 +27,12 @@ TODO: Add links to the container images
 
 ------------------------
 
-## Devices & Sensors
+## Devices, Sensors & DIY Electronics
 
 ### ESP32 / ESP8266 microcontroller
 
-* ESP32 & ESP8266 - are used to control various electronics over Wifi
-* ESP32 - also used as Wifi to Bluetooth Low Energy (BLE) bridge
+* ESP32 & ESP8266 - are used to control various DIY electronics over Wifi
+* ESP32 - also used as DIY Wifi to Bluetooth Low Energy (BLE) bridge
 
 ### Lighting
 
@@ -76,7 +76,7 @@ TODO: Add links to the container images
 * Xiaomi Aqara "WSDCGQ11LM" temperature & humidity & air pressure sensor - Zigbee
 * Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
 * Sonoff "SNZB-04" - door / window sensor - Zigbee
-* Bosch "BMP280" - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi
+* ["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi
 * <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - temperature & humidity sensor with LCD - BLE</s> - fail, due to unreliable data transfer!
 * TODO: Adafruit "LTR390" -  DIY UV and ambient light sensor (ESP & LTR390) - Wifi
 * TODO: "BH1750" - DIY ambient light sensor (ESP & BH1750) - Wifi
