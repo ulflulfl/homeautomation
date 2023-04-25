@@ -68,12 +68,12 @@ TODO: Add links to the container images
 
 * OpenWeatherMap - Internet
 * Flughafen Nürnberg - Internet
-* TODO: Xiaomi Aqara "WSDCGQ11LM" temperature, humidity & air pressure sensor - put in waterproof case on window sill outside?
+* TODO: Aqara "WSDCGQ11LM" temperature, humidity & air pressure sensor - put in waterproof case on window sill outside?
 
 ### Sensors
 
 * [Xiaomi Mijia "LYWSD03MMC"](Xiaomi_Mijia_LYWSD03MMC.md) x10 - temperature & humidity sensor with LCD - BLE
-* Xiaomi Aqara "WSDCGQ11LM" - temperature & humidity & air pressure sensor - Zigbee
+* Aqara "WSDCGQ11LM" - temperature & humidity & air pressure sensor - Zigbee
 * Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
 * Sonoff "SNZB-04" - door / window sensor - Zigbee
 * ["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi
@@ -88,7 +88,7 @@ TODO: Add links to the container images
 * IKEA TRÅDFRI "E1743" - double button - Zigbee
 * <s>IKEA STYRBAR "E2002" - quad button - Zigbee</s> unused
 * [Tuya Smart Knob](Tuya_Smart_Knob.md) "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee
-* Xiaomi Aqara Cube "MFKZQ01LM" - various actions - Zigbee
+* Aqara Cube "MFKZQ01LM" - various actions - Zigbee
 
 ### Display
 
@@ -117,7 +117,7 @@ TODO: Add links to the container images
 * TODO: VideoCam input
 * TODO: Calendar / workday based alarm clock
 * TODO: Window Cover
-* TODO: Xiaomi Aqara "SJCGQ11LM" water sensor - Zigbee
+* TODO: Aqara "SJCGQ11LM" water sensor - Zigbee
 * TODO: Bed occupancy sensor (ESP & HX711 based scale) - Wifi
 
 -------------------------------
