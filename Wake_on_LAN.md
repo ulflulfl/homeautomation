@@ -8,7 +8,10 @@ https://en.wikipedia.org/wiki/Wake-on-LAN
 
 A lot of "WoL How Tos" can be found on the web ...
 
-## Reducing PC Power Consumption
+--------
+
+## Usage
+### Reducing PC Power Consumption
 
 Bringing a PC into a deep sleep state (aka: standby) and only waking it up when needed, can SIGNIFICANTLY reduce the power consumption. However, measuring the actual power consumption is a good idea - even a PC in "deep sleep" may consume a noticeable amount of power.
 
@@ -16,7 +19,7 @@ Two examples:
 * My Esprimo desktop PC takes much less than 1W in standby (20W in idle).
 * My older HP DL380p server takes around 20W even in standby (and around 200W in idle)!
 
-As both machines are only used rarely, I want to reduce permanent power consumption both for environental and cost saving reasons. Set the Esprimo to standby with <1W is ok, but even the standby consumption of the HP server of 20W is too high for the long run. I switch it off completely using a Tuya Mains Plug (with < 1W) when not in use. 
+As both machines are only used rarely, I want to reduce permanent power consumption both for environental and cost saving reasons. Set the Esprimo to standby with <1W is ok, but even the standby consumption of the HP server of 20W is too high for the long run. I switch it off completely using a Tuya Mains Plug (with < 1W) when not in use.
 
 The cost for 1W each year in Nürnberg: 1 W * 24 h * 365 days * 0,4 €/kWh => 3,5 €/year
 
@@ -26,13 +29,15 @@ This results in:
 
 TODO: Move this to its own page and describe the different ways how to save power better?
 
-## Troubleshooting
+### Troubleshooting
 
 Setting up Wake-on-LAN can be a bit tricky, some hints:
 
 * Check ALL BIOS settings (usually in a section named "power" or "energy")
 * Check with a native (Windows or Linux) WoL client before trying with HASS or ESPHome if the PC actually wakes up
 * WoL will only work on the same Ethernet/Wifi segment. Router or NAT inbetween may cause problems
+
+--------
 
 ## Home Assistant
 

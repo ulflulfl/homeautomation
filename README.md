@@ -73,7 +73,7 @@ TODO: Add links to the container images
 ### Sensors
 
 * [Xiaomi Mijia "LYWSD03MMC"](Xiaomi_Mijia_LYWSD03MMC.md) x10 - temperature & humidity sensor with LCD - BLE
-* Xiaomi Aqara "WSDCGQ11LM" temperature & humidity & air pressure sensor - Zigbee
+* Xiaomi Aqara "WSDCGQ11LM" - temperature & humidity & air pressure sensor - Zigbee
 * Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
 * Sonoff "SNZB-04" - door / window sensor - Zigbee
 * ["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi

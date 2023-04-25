@@ -67,12 +67,12 @@ You can connect several I2C devices (not only one LCD) to the I2C bus, just conn
 TODO: Write a dedicated I2C page with max. wire lengths, adressing, ...
 
 --------------------
-### ESPHome yaml file
+### ESPHome
 
 https://esphome.io/components/display/lcd_display.html
 https://esphome.io/components/i2c.html
 
-A basic "Hello Ulf!" example:
+A basic "Hello Ulf!" yaml example:
 
 ```
 i2c:

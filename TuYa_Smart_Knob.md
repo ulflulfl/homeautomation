@@ -9,14 +9,16 @@
 
 Features:
 * Model: Moes ERS-10TZBVK-AA
-* Single Button and rotary encoder
-* Zigbee
+* Functions: Single Button and rotary encoder
+* Protocol: Zigbee
 * Battery: CR2032
-* 40x40x26.5 mm
+* Dimensions: 40x40x26.5 mm
 
 Aliexpress: ~14€ (2023.02)
 
 Various discussions about the knob: https://community.home-assistant.io/t/zigbee2mqtt-tuya-moes-smart-knob-ers-10tzbvk-aa/419989
+
+--------
 
 ## Usage
 
@@ -32,7 +34,7 @@ Turn the ring:
 * Button hold & left
 * Button hold & right
 
-## Back Side
+### Back Side
 
 ![TuYa Smart Knob back](images/tuya_smart_knob_back.jpg)
 *Back side with the two very small holes (bottom right) for RESET and LED. The two rubber areas prevent slipping*

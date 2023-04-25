@@ -9,7 +9,7 @@ Temperature and humidity sensor with Bluetooth Low Energy (BLE), LCD and a water
 
 Features:
 * LCD
-* Bluetooth Low Energy (BLE)
+* Protocol: Bluetooth Low Energy (BLE)
 * Battery: 2*AAA
 * Temperature range: -40~100 °C (external probe)
 * Humidity range: 0~99% RH
@@ -23,6 +23,8 @@ eBay 21,59 (2022.02)
 https://halfwheel.com/inkbird-ibs-th1-plus/296602/
 
 With *sudo hcitool lescan* on Linux, the device appears with the name 'sps'.
+
+--------
 
 ## ESPHome: yaml file
 

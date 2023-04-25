@@ -9,11 +9,11 @@ Low cost **temperature and humidity sensor** with Bluetooth Low Energy (BLE) and
 
 Features:
 * LCD
-* Bluetooth Low Energy (BLE)
+* Protocol: Bluetooth Low Energy (BLE)
 * Temperature: 0~60 °C (±0.1°C) -> the -14 °C from my freezer is displayed
 * Humidity: 0~99% RH (±1% RH)
 * Battery: CR2032
-* 43x43x12.5 mm
+* Dimensions: 43x43x12.5 mm
 
 Aliexpress ~6€ (2023.02)
 
@@ -23,13 +23,16 @@ Some links with additional infos:
 * https://blog.quindorian.org/2020/10/4-xiaomi-temperature-sensor-for-home-assistant.html/
 * https://hackaday.com/2020/12/08/exploring-custom-firmware-on-xiaomi-thermometers/
 
-## BLE Range
+--------
+
+## Usage
+### BLE Range
 
 Using an ESP32 as a "BLE to WiFi bridge" is working ok for all the BLE devices in my flat. Between the ESP32 and any of the LYWSD03MMC there is a maximum distance of around 5m and two walls/doors
 
 However, the connection to one LYWSD03MMC in the basement failed (slightly higher distance plus the additional floor/ceiling). I had to place a second ESP32 in my flat closer to the LYWSD03MMC (reducing the distance to 1-2m plus floor/ceiling) which is working fine now.
 
-## Accuracy
+### Accuracy
 
 The accuracy is listed in the user manual (±0.1°C and ±1% RH), but that's probably not the accuracy but simply the resolution.
 
@@ -40,14 +43,13 @@ As I don't own a "known good thermometer", I've compared several of the devices 
 
 For the price point, the results are really ok for me!
 
---------
-## Flash the Firmware
+### Flash the Firmware
 
 Flashing a custom firmware is straightforward, which makes life in ESPHome easy.
 
 Not sure if the original firmware directly connects to ESPHome or Home Assistant (e.g. using a bluetooth USB dongle?). I haven't done any experiments in that direction and just flashed the custom firmware ...
 
-### ATC or pvvx firmware?
+#### ATC or pvvx firmware?
 
 There seems to be two alternative custom firmware variants available:
 
@@ -62,7 +64,7 @@ Even the ATC page (https://github.com/atc1441/ATC_MiThermometer) suggests to use
 
 **I've only tried the ATC firmware, so the following describes that variant ...**
 
-### Flash using Android with Chrome
+#### Flash using Android with Chrome
 
 Flash is really simple when using an **Android Handy with a recent Chrome browser**.
 
@@ -78,7 +80,7 @@ At that page:
 
 Look at the bottom of the page, the log may indicate any problems.
 
-## Optional: Adjust offsets of temperature and humidity in ATC firmware
+### Optional: Adjust offsets of temperature and humidity in ATC firmware
 
 The measured values are already pretty accurate without adjustments. If a "known good reference" is available, the offsets can be adjusted in the ATC firmware.
 
@@ -135,6 +137,6 @@ Hint: Spend some thoughts to set the names "correct" at the first time, changing
 
 ## Home Assistant
 
-The values should appear in home assistant with an entity-id of e.g. *sensor.flur_temperatur* (derived from the name "Flur Temperatur") without further intervention.
+Make sure to have the ESPHome integration installed.
 
-Obviously, you need to have the ESPHome integration installed.
+The values should appear in home assistant with an entity-id of e.g. *sensor.flur_temperatur* (derived from the name "Flur Temperatur" in ESPHome) without further intervention.
