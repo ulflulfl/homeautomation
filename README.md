@@ -74,13 +74,15 @@ TODO: Add links to the container images
 
 * [Xiaomi Mijia "LYWSD03MMC"](Xiaomi_Mijia_LYWSD03MMC.md) x10 - temperature & humidity sensor with LCD - BLE
 * Aqara "WSDCGQ11LM" - temperature & humidity & air pressure sensor - Zigbee
+  * https://www.aqara.com/eu/temperature_humidity_sensor.html
+* [TuYa "WSD500A"](TuYa_WSD500A.md) - temperature & humidity sensor - Zigbee
 * Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
 * Sonoff "SNZB-04" - door / window sensor - Zigbee
 * ["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi
 * <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - temperature & humidity sensor with LCD - BLE</s> - fail, due to unreliable data transfer!
 * TODO: Adafruit "LTR390" -  DIY UV and ambient light sensor (ESP & LTR390) - Wifi
 * TODO: "BH1750" - DIY ambient light sensor (ESP & BH1750) - Wifi
-* TODO: Doostman AirCO2ntrol - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
+* TODO: TFA Doostmann AirCO2ntrol - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
 
 ### Buttons & Input
 
@@ -89,6 +91,7 @@ TODO: Add links to the container images
 * <s>IKEA STYRBAR "E2002" - quad button - Zigbee</s> unused
 * [Tuya Smart Knob](Tuya_Smart_Knob.md) "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee
 * Aqara Cube "MFKZQ01LM" - various actions - Zigbee
+  * https://www.aqara.com/eu/cube.html
 
 ### Display
 
@@ -118,6 +121,7 @@ TODO: Add links to the container images
 * TODO: Calendar / workday based alarm clock
 * TODO: Window Cover
 * TODO: Aqara "SJCGQ11LM" water sensor - Zigbee
+  * https://www.aqara.com/eu/water_leak_sensor.html
 * TODO: Bed occupancy sensor (ESP & HX711 based scale) - Wifi
 
 -------------------------------
