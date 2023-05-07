@@ -68,7 +68,7 @@ TODO: Add links to the container images
 
 * OpenWeatherMap - Internet
 * Flughafen Nürnberg - Internet
-* TODO: Aqara "WSDCGQ11LM" temperature, humidity & air pressure sensor - put in waterproof case on window sill outside?
+* [TuYa "WSD500A"](TuYa_WSD500A.md) - temperature & humidity sensor - on window outside
 
 ### Sensors
 
