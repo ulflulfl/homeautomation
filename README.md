@@ -9,7 +9,7 @@
 
 ### Software
 
-* Ubuntu Server 20.04 LTS
+* Ubuntu Server 20.04 LTS (EOL: Apr. 2025)
 * Docker
 
 ### Docker Container
@@ -68,7 +68,7 @@ TODO: Add links to the container images
 
 * OpenWeatherMap - Internet
 * Flughafen Nürnberg - Internet
-* [TuYa "WSD500A"](TuYa_WSD500A.md) - temperature & humidity sensor - on window outside
+* [TuYa "WSD500A"](TuYa_WSD500A.md) - temperature & humidity sensor (window outside) - ZigBee
 
 ### Sensors
 
