@@ -3,6 +3,7 @@
 Low cost **temperature and humidity sensor** with Bluetooth Low Energy (BLE) and LCD.
 
 *State (2023.02): Flashing the custom ATC firmware and connect the device to Home Assistant using ESPHome (with an ESP32) was quite easy. I haven't tried to connect it over BLE to Home Assistant directly.*
+*Update (2023.11): Batteries of the first devices failed in September. After replacing the CR2032 cell, the LCD remained blank and the battery failed again after 1-2 months. Changing from ATC to pvvx V4.4 firmware, the blank screen bug was gone. However, I need to keep an eye on the low battery life.*
 
 ![Xiaomi Mijia LYWSD03MMC](images/LYWSD03MMC.jpg)
 *Xiaomi Mijia LYWSD03MMC*
@@ -30,7 +31,7 @@ Some links with additional infos:
 
 Using an ESP32 as a "BLE to WiFi bridge" is working ok for all the BLE devices in my flat. Between the ESP32 and any of the LYWSD03MMC there is a maximum distance of around 5m and two walls/doors
 
-However, the connection to one LYWSD03MMC in the basement failed (slightly higher distance plus the additional floor/ceiling). I had to place a second ESP32 in my flat closer to the LYWSD03MMC (reducing the distance to 1-2m plus floor/ceiling) which is working fine now.
+The connection to one LYWSD03MMC in the basement failed at the beginning (slightly higher distance plus the additional floor/ceiling). Moving the ESP32 in my flat closer to the center of all LYWSD03MMC (reducing the distance to the one in the basement to 1-2m plus floor/ceiling) is working fine now.
 
 ### Accuracy
 
@@ -60,7 +61,7 @@ There seems to be two alternative custom firmware variants available:
   * https://github.com/pvvx/ATC_MiThermometer
   * https://pvvx.github.io/ATC_MiThermometer/TelinkMiFlasher.html
 
-Even the ATC page (https://github.com/atc1441/ATC_MiThermometer) suggests to use the improved pvvx firmware variant. If I would start from scratch, I'll use pvvx.
+Update 2023.11: In the meantime, even the ATC page (https://github.com/atc1441/ATC_MiThermometer) suggests to use the improved pvvx firmware variant. If I would start from scratch, I'd use pvvx.
 
 **I've only tried the ATC firmware, so the following describes that variant ...**
 
@@ -74,11 +75,32 @@ Point Chrome to: https://atc1441.github.io/TelinkFlasher.html
 
 At that page:
 * Connect -> select the device to flash from the pop-up (LYWSD03MMC)
-* Do Activation
+* Do Activation (seems only necessary with the factory firmware)
 * Durchsuchen ... to load firmware from the local filesystem
 * Start Flashing
 
 Look at the bottom of the page, the log may indicate any problems.
+
+### Bluetooth Name and MAC address
+
+Before flashing, the factory Bluetooth name of all devices will be LYWSD03MMC.
+
+After flashing the ATC firmware, the name depends on the MAC address and will be something like: ATC_010203, the second part is the last three bytes of the Bluetooth MAC address. The first three bytes are fixed to A4:C1:38. The MAC address in this example would be: A4:C1:38:01:02:03
+
+You can use *sudo hcitool lescan* on Linux, to list all active BLE devices.
+
+### Avoid Confusion
+The list of Bluetooth devices can already be pretty crowded. Handling of another 10+ devices can easily get confusing. Setting up the devices "one by one" is a good idea:
+
+* power up only one device
+* look for Bluetooth device with the factory name LYWSD03MMC (there should be only one)
+* flash firmware (Bluetooth name changes to ATC_...)
+* note down the new Bluetooth name
+
+I've used a label printer to write the MAC address and "my own serial number" at the back of each device. Later I've added the location. That made the handling of 10+ devices in use A LOT easier.
+
+![LYWSD03MMC_15_times.jpg](images/LYWSD03MMC_label.jpg)
+*Labels on the back with location, MAC address and "my own serial number"*
 
 ### Optional: Adjust offsets of temperature and humidity in ATC firmware
 
@@ -94,6 +116,7 @@ https://github.com/atc1441/ATC_MiThermometer/issues/168
 
 There is an ATC firmware bug (2023.02) that after changing the battery, the display is left blank. To fix this, flash the original Firmware and then the ATC Firmware back.
 https://github.com/atc1441/ATC_MiThermometer/issues/256 (in the issues link you'll find a link to the original firmware)
+Update 2023.11: My switch to the pvvx firmware fixed this bug (more details below)
 
 #### Weird display on very low battery
 
@@ -102,16 +125,7 @@ When the battery is really low, the display shows strange things.
 --------
 ## ESPHome
 
-Only the ESP32 supports BLE, so the ESP8266 won't work here.
-
-### Bluetooth Name and MAC address
-
-Before flashing, the Bluetooth name of all devices will be LYWSD03MMC.
-After flashing the ATC firmware, the name depends on the MAC address and will be something like: ATC_010203, the second part is the last three bytes of the Bluetooth MAC address. The first three bytes are fixed to A4:C1:38.
-
-The MAC address in this example would be: A4:C1:38:01:02:03
-
-You can use *sudo hcitool lescan* on Linux, to list all active BLE devices.
+The following assumes to use an ESP32 running ESPHome as a bridge between Bluetooth Low Energy (BLE) and Wifi. Only the ESP32 supports BLE, so the ESP8266 won't work here.
 
 ### ESPHome: yaml file
 
@@ -140,3 +154,39 @@ Hint: Spend some thoughts to set the names "correct" at the first time, changing
 Make sure to have the ESPHome integration installed.
 
 The values should appear in home assistant with an entity-id of e.g. *sensor.flur_temperatur* (derived from the name "Flur Temperatur" in ESPHome) without further intervention.
+
+## 2023.11: Change from ATC to pvvx firmware
+
+After the first devices failed due to low battery, I've changed the failed CR2032 cells. That caused a blank LCD screen (see known bugs section above) but values showed up again in Home Assistant. Only 1-2 months later, the battery failed again. I'm not sure if this is caused by a firmware bug (in combination with the blank LCD) or if the "new" cell was already just too old.
+
+In an attempt to fix these issues, I've changed the firmware to the latest pvvx version - at least the blank LCD bug was fixed. After inserting the battery, the LCD shows the measured values as expected now. Time will tell if the battery problem will also be gone ...
+
+### Firmware update from ATC to pvvx "ATC_v44.bin"
+- open Chrome on Windows (using Chrome on Android didn't worked any longer for me, I've switched to Chrome on Windows, Chrome on Linux probably also works)
+- enable "experimental" setting in Chrome, open the following URL in Chrome: *chrome://flags/#enable-experimental-web-platform-features* and switch to enabled
+- download pvvx firmware: https://github.com/pvvx/ATC_MiThermometer#firmware-binaries ("LYWSD03MMC Custom Firmware Version 4.4" when writing this)
+- open the "old flash tool" page: https://atc1441.github.io/TelinkFlasher.html
+(firmware update from "old" ATC to "new" pvvx was only possible with the "old flash tool". The "new pvvx Flasher" https://pvvx.github.io/ATC_MiThermometer/TelinkMiFlasher.html failed to connect to devices running the old ATC Firmware)
+
+To flash the firmware on that flasher page:
+- "Connect" button
+- select the correct BLE device in the appearing dialog and click "Koppeln"
+- wait that "Detected custom Firmware" appears in the log at the bottom of the page
+- "Datei auswählen" button and open the downloaded *ATC_v44.bin* file
+- "Start Flashing" button
+- wait for status text below the button to show that flashing completed
+
+Flashing is pretty quick (10 seconds or so). For whatever reason, one device (out of the 15 I have) took significantly longer (about 10 minutes!).
+
+### Changes in ESPHome
+Seems that pvvx uses a different data format compared to ATC. After the change update, no measuring values showed up in Home Assistant.
+
+In ESPHome yaml file, change "platform: atc_mithermometer" to "platform: pvvx_mithermometer" (for details see: https://esphome.io/components/sensor/xiaomi_ble.html) and upload the new firmware to the ESP32
+
+### Checking if values appear in the ESPHome Log or in Home Assistant
+The corresponding values should appear in the ESPHome log again. While the former ATC firmware provided values with one digit after the colon "21.3", pvvx now provides two digits "21.31".
+
+As a nice side effect, the history card in Home Assistant shows smoother curves now :-)
+
+![smoother curves with pvvx firmware](images/pvvx_smoother_curves.png)
+*Smoother history curves after the switch to pvvx firmware*
