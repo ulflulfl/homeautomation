@@ -3,6 +3,7 @@
 Low cost **temperature and humidity sensor** with Bluetooth Low Energy (BLE) and LCD.
 
 *State (2023.02): Flashing the custom ATC firmware and connect the device to Home Assistant using ESPHome (with an ESP32) was quite easy. I haven't tried to connect it over BLE to Home Assistant directly.*
+
 *Update (2023.11): Batteries of the first devices failed in September. After replacing the CR2032 cell, the LCD remained blank and the battery failed again after 1-2 months. Changing from ATC to pvvx V4.4 firmware, the blank screen bug was gone. However, I need to keep an eye on the low battery life.*
 
 ![Xiaomi Mijia LYWSD03MMC](images/LYWSD03MMC.jpg)
@@ -85,7 +86,7 @@ Look at the bottom of the page, the log may indicate any problems.
 
 Before flashing, the factory Bluetooth name of all devices will be LYWSD03MMC.
 
-After flashing the ATC firmware, the name depends on the MAC address and will be something like: ATC_010203, the second part is the last three bytes of the Bluetooth MAC address. The first three bytes are fixed to A4:C1:38. The MAC address in this example would be: A4:C1:38:01:02:03
+After flashing the ATC firmware, the name depends on the MAC address and will be something like: ATC_010203. The first part is fixed to "ATC_", the second part "010203" is the last three bytes of the Bluetooth MAC address. The first three bytes of the MAC address are fixed to A4:C1:38, so the full address in this example would be: A4:C1:38:01:02:03
 
 You can use *sudo hcitool lescan* on Linux, to list all active BLE devices.
 
@@ -97,7 +98,7 @@ The list of Bluetooth devices can already be pretty crowded. Handling of another
 * flash firmware (Bluetooth name changes to ATC_...)
 * note down the new Bluetooth name
 
-I've used a label printer to write the MAC address and "my own serial number" at the back of each device. Later I've added the location. That made the handling of 10+ devices in use A LOT easier.
+I've used a label printer to write the MAC address and "my own serial number" at the back of each device. Later I've added a label of the location. That made the handling of 10+ devices in use A LOT easier.
 
 ![LYWSD03MMC_15_times.jpg](images/LYWSD03MMC_label.jpg)
 *Labels on the back with location, MAC address and "my own serial number"*
@@ -162,7 +163,9 @@ After the first devices failed due to low battery, I've changed the failed CR203
 In an attempt to fix these issues, I've changed the firmware to the latest pvvx version - at least the blank LCD bug was fixed. After inserting the battery, the LCD shows the measured values as expected now. Time will tell if the battery problem will also be gone ...
 
 ### Firmware update from ATC to pvvx "ATC_v44.bin"
-- open Chrome on Windows (using Chrome on Android didn't worked any longer for me, I've switched to Chrome on Windows, Chrome on Linux probably also works)
+Selecting the right browser for the update can be a bit tricky. I've used Chrome on Android before, but that didn't worked any longer for me. The "new pvvx Flasher" page https://pvvx.github.io/ATC_MiThermometer/TelinkMiFlasher.html suggests that Chrome, Opera or Edge should work. I've switched to Chrome on Windows.
+
+- open Chrome on Windows
 - enable "experimental" setting in Chrome, open the following URL in Chrome: *chrome://flags/#enable-experimental-web-platform-features* and switch to enabled
 - download pvvx firmware: https://github.com/pvvx/ATC_MiThermometer#firmware-binaries ("LYWSD03MMC Custom Firmware Version 4.4" when writing this)
 - open the "old flash tool" page: https://atc1441.github.io/TelinkFlasher.html
