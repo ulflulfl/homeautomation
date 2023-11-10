@@ -117,6 +117,7 @@ https://github.com/atc1441/ATC_MiThermometer/issues/168
 
 There is an ATC firmware bug (2023.02) that after changing the battery, the display is left blank. To fix this, flash the original Firmware and then the ATC Firmware back.
 https://github.com/atc1441/ATC_MiThermometer/issues/256 (in the issues link you'll find a link to the original firmware)
+
 Update 2023.11: My switch to the pvvx firmware fixed this bug (more details below)
 
 #### Weird display on very low battery
@@ -163,7 +164,7 @@ After the first devices failed due to low battery, I've changed the failed CR203
 In an attempt to fix these issues, I've changed the firmware to the latest pvvx version - at least the blank LCD bug was fixed. After inserting the battery, the LCD shows the measured values as expected now. Time will tell if the battery problem will also be gone ...
 
 ### Firmware update from ATC to pvvx "ATC_v44.bin"
-Selecting the right browser for the update can be a bit tricky. I've used Chrome on Android before, but that didn't worked any longer for me. The "new pvvx Flasher" page https://pvvx.github.io/ATC_MiThermometer/TelinkMiFlasher.html suggests that Chrome, Opera or Edge should work. I've switched to Chrome on Windows.
+Selecting the right browser for the update can be a bit tricky. I've used Chrome on Android before, but that didn't worked any longer for me. The "new pvvx Flasher" page https://pvvx.github.io/ATC_MiThermometer/TelinkMiFlasher.html suggests that Chrome, Opera or Edge should work, so I've switched to Chrome on Windows.
 
 - open Chrome on Windows
 - enable "experimental" setting in Chrome, open the following URL in Chrome: *chrome://flags/#enable-experimental-web-platform-features* and switch to enabled
@@ -179,10 +180,10 @@ To flash the firmware on that flasher page:
 - "Start Flashing" button
 - wait for status text below the button to show that flashing completed
 
-Flashing is pretty quick (10 seconds or so). For whatever reason, one device (out of the 15 I have) took significantly longer (about 10 minutes!).
+Flashing is pretty quick (10 seconds or so) and the status text is updated frequently. For whatever reason, one device (out of the 15 I have) took significantly longer (about 10 minutes!).
 
 ### Changes in ESPHome
-Seems that pvvx uses a different data format compared to ATC. After the change update, no measuring values showed up in Home Assistant.
+Seems that pvvx uses a different data format compared to ATC. After the firmware change, no measured values showed up in Home Assistant.
 
 In ESPHome yaml file, change "platform: atc_mithermometer" to "platform: pvvx_mithermometer" (for details see: https://esphome.io/components/sensor/xiaomi_ble.html) and upload the new firmware to the ESP32
 
