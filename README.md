@@ -4,7 +4,7 @@
 
 ### Hardware
 
-* Chuwi Herobox - Intel Gemini Lake J4125, 8 GB RAM, 256 GB SSD, fanless
+* [Chuwi "Herobox"](Chuwi_Herobox.md) - Intel Gemini Lake J4125, 8 GB RAM, 256 GB SSD, fanless
 * Sonoff "ZBDongle-P" ZigBee USB Stick - with 2m USB expansion cable to avoid interferences
 
 ### Software
