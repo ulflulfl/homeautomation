@@ -37,6 +37,7 @@ Additional info links (there are many pages to "DIY smartify" the VINDRIKTNING):
 * https://style.oversubstance.net/2021/08/diy-use-an-ikea-vindriktning-air-quality-sensor-in-home-assistant-with-esphome/
 * https://www.instructables.com/Connecting-a-IKEA-Vindriktning-to-Home-Assistant-U/
 * https://arnowelzel.de/ikea-vindriktning-mit-tasmota-und-scd30
+* https://community.home-assistant.io/t/ikea-vindriktning-air-quality-sensor/324599
 
 Remark: I'm assuming that the sensor used is a Cubic PM1006 as stated at several internet sources. On the sensor itself only "Cubic" is imprinted, I couldn't find any type/model markings on it.
 
