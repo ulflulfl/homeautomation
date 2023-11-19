@@ -127,3 +127,11 @@ TODO: Add links to the container images
 -------------------------------
 
 ## TODO: Automations
+
+-------------------------------
+
+## Measurements
+
+### Power Consumption
+
+* [DeLonghi Inissio](power_consumption/delonghi_inissio.md) (Nespresso) coffee maker
