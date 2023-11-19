@@ -27,7 +27,7 @@ With ESP8266 "DIY hack":
 * Power supply: 5V 0.1A (USB-C)
 * Protocol: WiFi
 
-Link to Datasheet:
+Link to manual / datasheet:
 * Ikea VINDRIKTNING: https://www.ikea.com/de/de/p/vindriktning-luftqualitaetssensor-70498242/
 * Cubic PM1006 (sensor): http://www.jdscompany.co.kr/download.asp?gubun=07&filename=PM1006_LED_PARTICLE_SENSOR_MODULE_SPECIFICATIONS.pdf
 
@@ -38,7 +38,7 @@ Additional info links (there are many pages to "DIY smartify" the VINDRIKTNING):
 * https://www.instructables.com/Connecting-a-IKEA-Vindriktning-to-Home-Assistant-U/
 * https://arnowelzel.de/ikea-vindriktning-mit-tasmota-und-scd30
 
-Remark: I'm assuming that the sensor used is a Cubic PM1006 as stated at several internet sources. On the sensor iself only "Cubic" is imprinted, I couldn't find any type/model markings on it.
+Remark: I'm assuming that the sensor used is a Cubic PM1006 as stated at several internet sources. On the sensor itself only "Cubic" is imprinted, I couldn't find any type/model markings on it.
 
 --------
 
@@ -50,7 +50,7 @@ In a quiet room, the tiny fan inside is clearly noticeable even when 1m away and
 Both shortcomings (no interface and noticeable fan noise) can be hacked away relatively easy, if you know how to use a soldering iron and ESPHome :-)
 
 ### Air Quality
-The VINDRIKTNING indicates "Particulate Matter" PM 2.5 (german: Feinstaub), which is the mass of particles with 2.5 μm or smaller in size, measured in μg/m³. The Cubic PM1006 sensor used here actually measures particles of 0.3μm ~ 10μm.
+The VINDRIKTNING indicates "Particulate Matter" PM 2.5 (german: Feinstaub), which is the mass of particles with 2.5 μm or smaller in size, measured in μg/m³. The Cubic PM1006 sensor used here actually measures particles of 0.3 ~ 10 μm.
 
 Other important air quality indicators for indoor rooms are NOT measured:
 
