@@ -67,7 +67,7 @@ TODO: Add links to the container images
 ### Weather
 
 * OpenWeatherMap - Internet
-* Flughafen Nürnberg - Internet
+* <s>Flughafen Nürnberg - Internet</s> - fail, due to unreliable data transfer!
 * [TuYa "WSD500A"](TuYa_WSD500A.md) - temperature & humidity sensor (window outside) - ZigBee
 
 ### Sensors
