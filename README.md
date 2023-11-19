@@ -33,18 +33,19 @@ TODO: Add links to the container images
 
 * ESP32 & ESP8266 - are used to control various DIY electronics over Wifi
 * ESP32 - also used as DIY Wifi to Bluetooth Low Energy (BLE) bridge
+* ESP32 - also used as DIY Wifi to Bluetooth proxy
 
 ### Lighting
 
 * 3A (Nue) "HGZB-41" - wall switch - Zigbee
 * IKEA "LED1924G9" - TRÅDFRI 806 lm RGB - Zigbee
-* WLED - DIY RGB light (ESP & WS2812B) - Wifi
+* <s>WLED - DIY RGB light (ESP & WS2812B) - Wifi</s> unused
 
 ### Mains Voltage "Plugs"
 
-* Tuya "TS011F_plug_1" x3 - plug with voltage, power, ... measurements - Zigbee
-* Lidl "HG06337" - plug without measurements - Zigbee
-* Peacefair PZEM-004T - DIY mains measurement (ESP & PZEM-004T-V3) - Wifi
+* Tuya "TS011F_plug_1" x3 - mains plug with voltage, power, ... measurements - Zigbee
+* Lidl "HG06337" - mains plug without measurements - Zigbee
+* <s>Peacefair PZEM-004T - DIY mains measurement (ESP & PZEM-004T-V3) - Wifi</s> unused
 
 ### Heating & Cooling
 
@@ -77,27 +78,28 @@ TODO: Add links to the container images
   * https://www.aqara.com/eu/temperature_humidity_sensor.html
 * [TuYa "WSD500A"](TuYa_WSD500A.md) - temperature & humidity sensor - Zigbee
 * Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
-* Sonoff "SNZB-04" - door / window sensor - Zigbee
+* Sonoff "SNZB-04" - x2 - door / window sensor - Zigbee
 * ["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi
 * <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - temperature & humidity sensor with LCD - BLE</s> - fail, due to unreliable data transfer!
-* ["Ikea VINDRIKTNING"](Ikea_VINDRIKTNING.md) - DIY air quality (PM 2.5) sensor (ESP & VINDRIKTNING) - Wifi
+* [Ikea "VINDRIKTNING"](Ikea_VINDRIKTNING.md) - DIY air quality (PM 2.5) sensor (ESP & VINDRIKTNING) - Wifi
 * TODO: Adafruit "LTR390" -  DIY UV and ambient light sensor (ESP & LTR390) - Wifi
 * TODO: "BH1750" - DIY ambient light sensor (ESP & BH1750) - Wifi
 * TODO: TFA Doostmann AirCO2ntrol - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
+* TODO: Other air quality sensors
 
 ### Buttons & Input
 
 * Xiaomi Wireless Switch "WXKG01LM" - single button - Zigbee
 * IKEA TRÅDFRI "E1743" - double button - Zigbee
 * <s>IKEA STYRBAR "E2002" - quad button - Zigbee</s> unused
-* [Tuya Smart Knob](Tuya_Smart_Knob.md) "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee
-* Aqara Cube "MFKZQ01LM" - various actions - Zigbee
-  * https://www.aqara.com/eu/cube.html
+* <s>[Tuya Smart Knob](Tuya_Smart_Knob.md) "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee</s> unused (eats batteries?)
+* <s>Aqara Cube "MFKZQ01LM" - various actions - Zigbee
+  * https://www.aqara.com/eu/cube.html</s> unused
 
 ### Display
 
-* [LCD Character Display](LCD_Character_Display.md) - DIY 20x4 char display (ESP, PCF8574 & display) - Wifi
-* TODO: Android tablet as display? - Wifi
+* <s>[LCD Character Display](LCD_Character_Display.md) - DIY 20x4 char display (ESP, PCF8574 & display) - Wifi</s> unused
+* TODO: Samsung Galaxy Tab A8 - Android tablet as display&controller - Wifi
 
 ### Computer (over Wifi or LAN)
 
@@ -120,7 +122,7 @@ TODO: Add links to the container images
 * TODO: OctoPrint ?
 * TODO: VideoCam input
 * TODO: Calendar / workday based alarm clock
-* TODO: Window Cover
+* TODO: Window blinds ?
 * TODO: Aqara "SJCGQ11LM" water sensor - Zigbee
   * https://www.aqara.com/eu/water_leak_sensor.html
 * TODO: Bed occupancy sensor (ESP & HX711 based scale) - Wifi
