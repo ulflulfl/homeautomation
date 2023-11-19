@@ -43,7 +43,7 @@ Remark: I'm assuming that the sensor used is a Cubic PM1006 as stated at several
 --------
 
 ## Usage
-The Ikea VINDRIKTNING indicates the air quality in the room by measuring particle mass concentration (PM) with a size of about 2.5 um. It displays the air quality with a simple LED traffic light (green/amber/red). Beside these three LEDs, it has no communication interface.
+The Ikea VINDRIKTNING indicates the air quality in the room by measuring particle mass concentration (PM) with a size of about 2.5 μm. It displays the air quality with a simple LED traffic light (green/amber/red). Beside these three LEDs, it has no communication interface.
 
 In a quiet room, the tiny fan inside is clearly noticeable even when 1m away and in addition to that, it turns on for 20s and then off for 10s. That really annoys me in the bedroom.
 
@@ -80,7 +80,7 @@ However, to get a first impression about the air quality regarding PM 2.5, even 
 
 With an ESP8266 (or ESP32) board and ESPHome, it is fairly easy to connect the VINDRIKTNING to Home Assistant and measure the PM 2.5 air quality value.
 
-The "noisy" fan runs on 5V which can be heard even 1m away. When using 3.3 V from the ESP8266 instead, the fan runs completely silent, even if only 20 cm away. However, I don't know if that affects accuracy.
+The "noisy" fan runs on 5V which can be heard even 1m away. When using 3.3 V from the ESP8266 instead, the fan runs completely silent, even if only 20 cm away. However, I don't know if the slower fan affects accuracy.
 
 Many instructions can be found on the internet how to do these hacks.
 
@@ -98,8 +98,8 @@ The fan runs on 5V and the VINDRIKTNING controller switches the ground side off 
 
 Probably any ESP8266 or ESP32 could be used as only one serial line is needed. The small, cheap and easy to use "Wemos D1 mini" is a good choice.
 
-![D1 mini, antenna side](images/D1_mini_antenna.jpg)
-*D1 mini (ESP8266), antenna side*
+![D1 mini, antenna/processor side](images/D1_mini_antenna.jpg)
+*D1 mini (ESP8266), antenna/processor side*
 
 ![D1 mini, USB side](images/D1_mini_USB.jpg)
 *D1 mini, USB side*
@@ -178,8 +178,24 @@ entity: sensor.vindrik_particulate_matter_25m
 name: VINDRIKTNING PM 2.5
 ```
 
-![VINDRIKTNING](images/VINDRIKTNING_Home_Assistant.png)
+![Home Assistant showing PM 2.5 measured value](images/VINDRIKTNING_Home_Assistant.png)
 *Home Assistant showing PM 2.5 measured value*
+
+## Conclusion
+
+Without any kind of PM 2.5 sensor, you just don't know the indoor air quality regarding particulate matter. As I don't smoke and don't have pets, I was expecting it to be at least ok.
+
+The measured values in my bedroom I've seen so far are below 15 μg/m³, usually even below 5 μg/m³.
+
+To judge if these values are "ok" can be more challenging. Some hints:
+
+* The Ikea VINDRIKTNING "LED traffic light" indicate values below 35 μg/m³ as green
+* California Ambient Air Quality Standard: 12 μg/m³ (annual average)
+  * https://ww2.arb.ca.gov/resources/inhalable-particulate-matter-and-health
+* WHO / Umweltbundesamt (germany): 25 μg/m³ (boundary value)
+  * https://www.air-q.com/messwerte/feinstaub
+
+Although the sensor accuracy may not be the best, it seems that my measured values are just fine.
 
 ## Images
 
