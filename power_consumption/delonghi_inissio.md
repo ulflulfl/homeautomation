@@ -38,7 +38,7 @@ Although the machine takes more than 1000W peak, it is only doing so for about o
 **The whole process of preparing one cup of coffee Lungo takes only around 0,02 kWh!**
 
 ## Conclusion
-The power consumption of the Inissio itself is surprisingly low.
+The power consumption of the Inissio itself is surprisingly low. Consumption in power off can't even be measured.
 
 **One cup of coffee every day would sum up to 7,3 kWh per year.**
 
