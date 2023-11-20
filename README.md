@@ -82,6 +82,7 @@ TODO: Add links to the container images
 * ["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi
 * <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - temperature & humidity sensor with LCD - BLE</s> - fail, due to unreliable data transfer!
 * [Ikea "VINDRIKTNING"](Ikea_VINDRIKTNING.md) - DIY air quality (PM 2.5) sensor (ESP & VINDRIKTNING) - Wifi
+* [Oral-B "Genius X"](Oral-B_Genius_X.md) - toothbrush with sensors - Bluetooth
 * TODO: Adafruit "LTR390" -  DIY UV and ambient light sensor (ESP & LTR390) - Wifi
 * TODO: "BH1750" - DIY ambient light sensor (ESP & BH1750) - Wifi
 * TODO: TFA Doostmann AirCO2ntrol - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
