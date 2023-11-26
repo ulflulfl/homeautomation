@@ -17,7 +17,9 @@ Features:
 
 Infos:
 * https://www.service.oralb.com/us/en/products/3771/
-* https://www.home-assistant.io/integrations/oralb/
+* https://www.home-assistant.io/integrations/oralb/ (with list of supported models)
+* https://www.youtube.com/watch?v=pFPX-MPycm8 (Automation Ideas)
+
 
 eBay: 79 € (2023.11)
 
@@ -63,6 +65,10 @@ https://www.home-assistant.io/integrations/oralb/
 ### Bluetooth
 
 Setup Bluetooth support (Bluetooth integration or Bluetooth proxy) in Home Assistant first. I'm using an ESP32/ESPHome based Bluetooth proxy that works just fine.
+
+
+* https://www.home-assistant.io/integrations/bluetooth/ Home Assistant Bluetooth integration
+* https://esphome.io/projects/?type=bluetooth ESPHome Bluetooth proxy
 
 ### Oral-B
 
