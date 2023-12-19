@@ -2,7 +2,7 @@
 
 A toothbrush with Bluetooth
 
-*State (2023.11): Home Assistant Oral-B integration works fine and automatically reminds me twice a day ...*
+*State (2023.12): Home Assistant Oral-B integration works fine and automatically reminds me twice a day ...*
 
 ![Oral-B Genius X white](images/Oral-B_Genius-X_off.jpg)
 *Oral-B Genius X white*
@@ -11,13 +11,13 @@ Features:
 * Model: Oral-B Genius X (Type: 3771)
 * Functions: 6 cleaning modes, SmartRing, AI, ... (well, I don't really care)
 * Battery: Integrated Li-Ion
-* Protocol: Bluetooth
+* Protocol: Bluetooth (Bluetooth Low Energy?)
 * Power: Oral-B cordless power adapter
 * Dimensions: 202x34x29 mm (without brush head)
 
 Infos:
 * https://www.service.oralb.com/us/en/products/3771/
-* https://www.home-assistant.io/integrations/oralb/ (with list of supported models)
+* https://www.home-assistant.io/integrations/oralb/ (with a list of models that Home Assistant supports)
 * https://www.youtube.com/watch?v=pFPX-MPycm8 (Automation Ideas)
 
 
@@ -27,9 +27,9 @@ eBay: 79 € (2023.11)
 
 ## Why?
 
-I often can't remember if I already brushed my teeth or not. Trying to write this down on paper or such was just annoying. Therefore I thought to buy a toothbrush with Bluetooth, so Home Assistant can remember me automatically that it's time to do the job again.
+I often can't remember if I already brushed my teeth or not. Trying to write this down on paper or such was just annoying. Therefore I thought to buy a toothbrush with Bluetooth, so Home Assistant can remember me that it's time to do the job again and notices automatically when the job was done.
 
-Home Assistant provides an Oral-B integration and I'm satisfied with my former Oral-B models. So I looked for the cheapest model supported by that integration, which is the Genius X.
+I took an Oral-B toothbrush, as Home Assistant provides an Oral-B integration and I'm satisfied with my former Oral-B models. So I looked for the cheapest model supported by that integration, which is the Genius X.
 
 ## Usage
 
@@ -103,7 +103,17 @@ entities:
 ![Home Assistant entities card while toothbrush is running](images/Oral-B_Genius-X_hass_running.png)
 *Home Assistant entities card while toothbrush is running*
 
+-------------------------
+
+## Automation
+
 The "Toothbrush State" becoming "idle" or "running" was the most interesting entity when I started to automate things ...
+
+In Home Assistant I've added an input_boolean helper that is "on" when its time to brush my teeth and "off" when all is well. This state is indicated by an icon on my home dashboard and by a color change of an LED strip.
+
+The actual automation is done in Node-Red, the input_boolean helper is switched "off" when the toothbrush changes to "running". Once the brush is getting back to "idle", a trigger is started which turns the helper "on" again after 8 hours.
+
+The automation works well, unless Home Assistant / Node-Red is rebooted, as this "resets" the time / state. Needs further investigation.
 
 -------------------------
 
@@ -111,7 +121,9 @@ The "Toothbrush State" becoming "idle" or "running" was the most interesting ent
 
 The hardest part was to set up Bluetooth support for Home Assistant. The setup of the toothbrush itself was really easy. As a bonus, the data from the toothbrush is recognized by Home Assistant almost instantly.
 
-Is it worth spending 80€ for a smart toothbrush? Well, time will tell if it helps me or not ...
+Is it worth spending 80€ for a smart toothbrush? Well, it helps me to very regularly brush my teeth, so for me the money was well spend ...
+
+-------------------------
 
 ## Images
 
