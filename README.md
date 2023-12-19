@@ -88,10 +88,9 @@ TODO: Add links to the container images
 * [Xiaomi Mijia "LYWSD03MMC"](Xiaomi_Mijia_LYWSD03MMC.md) x11 - temperature & humidity sensor with LCD - BLE
 * Aqara "WSDCGQ11LM" x2 - temperature & humidity & air pressure sensor - Zigbee
   * https://www.aqara.com/eu/temperature_humidity_sensor.html
-* [TuYa "WSD500A"](TuYa_WSD500A.md) - temperature & humidity sensor - Zigbee
 * [Ikea "VINDRIKTNING"](Ikea_VINDRIKTNING.md) - DIY air quality (PM 2.5) sensor (ESP & VINDRIKTNING) - Wifi
-* TODO: TFA Doostmann AirCO2ntrol - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
-* TODO: Other air quality sensors
+* TODO: TFA Doostmann "AirCO2ntrol mini" - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
+* TODO: Other air quality sensors (DIY: Sensirion SPS30, SGP30, SCD41)
 * <s>["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi</s> - unused
 * <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - temperature & humidity sensor with LCD - BLE</s> - fail, due to unreliable data transfer!
 
@@ -112,8 +111,8 @@ TODO: Add links to the container images
 * IKEA TRÅDFRI "E1743" - double button - Zigbee
 * <s>IKEA STYRBAR "E2002" - quad button - Zigbee</s> - unused, its a bit bulky
 * <s>[Tuya Smart Knob](Tuya_Smart_Knob.md) "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee</s> unused (eats batteries?)
-* <s>Aqara Cube "MFKZQ01LM" - various actions - Zigbee
-  * https://www.aqara.com/eu/cube.html</s> unused, usage confuses me :-)
+* <s>Aqara Cube "MFKZQ01LM" - various actions - Zigbee</s> - unused, usage confuses me :-)
+  * <s>https://www.aqara.com/eu/cube.html</s>
 
 ### Display & Control
 
@@ -142,7 +141,7 @@ TODO: Add links to the container images
 * TODO: Mi Body Composition Scale 2 - body scale
 * TODO: NFC tags
 * TODO: Infrared - IR-control in/out
-* TODO: OctoPrint ?
+* TODO: 3D printer / OctoPrint ?
 * TODO: VideoCam input
 * TODO: Calendar / workday based alarm clock
 * TODO: Window blinds ?
