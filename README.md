@@ -29,7 +29,11 @@ TODO: Add links to the container images
 
 ------------------------
 
-## Devices, Sensors & DIY Electronics
+## "Ready Made" Devices & DIY Electronics
+
+Most devices should be very safe to use as they run with batteries, low voltages (e.g. USB) or normal mains voltage plugs.
+
+**Warning: A few devices below require installation to 110/230V mains voltage with bare wires. Making mistakes can kill you here. Work with mains voltage wires only, if you really know what you are doing!**
 
 ### ESP32 / ESP8266 microcontroller
 
@@ -43,8 +47,8 @@ TODO: Add links to the container images
 * IKEA "LED2103G5" x3 - light bulb 806 lm warm white - Zigbee
 * Lonsonho "ZB-RGBCW" - LED strip controller 12V RGBCCT - Zigbee
 * LED strip controller "no name" x3 - USB LED controller with very limited range! - Bluetooth
-* 3A (Nue) "HGZB-41" - wall switch - Zigbee
-* Girier/Tuya "JR-ZDS01" - mini smart switch - Zigbee
+* 3A (Nue) "HGZB-41" - wall switch (beware: mains voltage wires!) - Zigbee
+* Girier/Tuya "JR-ZDS01" - mini smart switch (beware: mains voltage wires!) - Zigbee
 * <s>IKEA "LED1924G9" - TRÅDFRI 806 lm RGB - Zigbee</s> unused
 * <s>WLED - DIY RGB light (ESP & WS2812B) - Wifi</s> unused
 
@@ -52,8 +56,8 @@ TODO: Add links to the container images
 
 * Tuya "TS011F_plug_1" x3 - mains plug with measurements of voltage, power, ... - Zigbee
 * Lidl "HG06337" - mains plug without measurements - Zigbee
-* Tuya "PJ-1203A" - power monitor 2 channel for DIN rail - Zigbee
-* <s>Peacefair PZEM-004T - DIY mains measurement (ESP & PZEM-004T-V3) - Wifi</s> -> no longer used due to low resolution of measurements, "PJ-1203A" is much better
+* Tuya "PJ-1203A" - power monitor 2 channel for DIN rail (beware: mains voltage wires!) - Zigbee
+* <s>Peacefair PZEM-004T - DIY mains measurement (ESP & PZEM-004T-V3) (beware: mains voltage wires!) - Wifi</s> -> no longer used due to low resolution of measurements, "PJ-1203A" is much better
 
 ### Heating & Cooling
 
@@ -80,7 +84,7 @@ TODO: Add links to the container images
 ### Weather
 
 * OpenWeatherMap - Internet
-* [TuYa "WSD500A"](TuYa_WSD500A.md) - temperature & humidity sensor (window outside) - ZigBee
+* [TuYa "WSD500A"](TuYa_WSD500A.md) - temperature & humidity sensor (located at my window outside) - ZigBee
 * <s>Flughafen Nürnberg - Internet</s> - fail, due to unreliable data transfer!
 
 ### Indoor Air
