@@ -1,5 +1,7 @@
 # Home Automation of ulfl
 
+Home automation related infos. Collected for myself, but may help others ...
+
 ## Server
 
 ### Hardware
@@ -32,100 +34,118 @@ TODO: Add links to the container images
 ### ESP32 / ESP8266 microcontroller
 
 * ESP32 & ESP8266 - are used to control various DIY electronics over Wifi
-* ESP32 - also used as DIY Wifi to Bluetooth Low Energy (BLE) bridge
-* ESP32 - also used as DIY Wifi to Bluetooth proxy
+* ESP32 - used as DIY Wifi to Bluetooth Low Energy (BLE) bridge (for [Xiaomi Mijia "LYWSD03MMC"](Xiaomi_Mijia_LYWSD03MMC.md))
+* ESP32 - used as DIY Wifi to Bluetooth proxy (for [Oral-B "Genius X"](Oral-B_Genius_X.md) and LED strip controller)
 
-### Lighting
+### Lamping
 
+* IKEA "LED2003G10" - light bulb 1055 lm warm & cold white - Zigbee
+* IKEA "LED2103G5" x3 - light bulb 806 lm warm white - Zigbee
+* Lonsonho "ZB-RGBCW" - LED strip controller 12V RGBCCT - Zigbee
+* LED strip controller "no name" x3 - USB LED controller with very limited range! - Bluetooth
 * 3A (Nue) "HGZB-41" - wall switch - Zigbee
-* IKEA "LED1924G9" - TRÅDFRI 806 lm RGB - Zigbee
+* Girier/Tuya "JR-ZDS01" - mini smart switch - Zigbee
+* <s>IKEA "LED1924G9" - TRÅDFRI 806 lm RGB - Zigbee</s> unused
 * <s>WLED - DIY RGB light (ESP & WS2812B) - Wifi</s> unused
 
-### Mains Voltage "Plugs"
+### Mains Voltage
 
-* Tuya "TS011F_plug_1" x3 - mains plug with voltage, power, ... measurements - Zigbee
+* Tuya "TS011F_plug_1" x3 - mains plug with measurements of voltage, power, ... - Zigbee
 * Lidl "HG06337" - mains plug without measurements - Zigbee
-* <s>Peacefair PZEM-004T - DIY mains measurement (ESP & PZEM-004T-V3) - Wifi</s> unused
+* Tuya "PJ-1203A" - power monitor 2 channel for DIN rail - Zigbee
+* <s>Peacefair PZEM-004T - DIY mains measurement (ESP & PZEM-004T-V3) - Wifi</s> -> no longer used due to low resolution of measurements, "PJ-1203A" is much better
 
 ### Heating & Cooling
 
+* Earu "TV02-Zigbee" - radiator valve - Zigbee
 * TODO: Xiaomi "Mi Smart Standing Fan 2 EU" - Wifi
-* <s>Earu/TuYa "TV02" Radiator Valve - Zigbee</s> fail, even the valve alone just doesn't work
+* <s>Earu/TuYa "TV02" - radiator valve - Zigbee</s> fail, even the valve alone just doesn't work
 
 ### Audio Output
 
-* MaryTTS - text to speech engine - Wifi/LAN
-* [MAX98357 Media Player](MAX98357_Media_Player.md) - DIY Wifi speaker (ESP32 & MAX98357) - Wifi
-* <s>Rtttl buzzer (ESP & Rtttl Buzzer) - Wifi</s> fail, due to very bad sound quality!
 * TODO: Media Player ?
 * TODO: Rhasspy ?
+* <s>MaryTTS - text to speech engine - Wifi/LAN</s> - TTS on Android tablet used instead
+* <s>Rtttl buzzer (ESP & Rtttl Buzzer) - Wifi</s> - TTS on Android tablet used instead
+* <s>[MAX98357 Media Player](MAX98357_Media_Player.md) - DIY Wifi speaker (ESP32 & MAX98357) - Wifi</s> - unused
 
 ### Occupancy
 
-* Sonoff "SNZB-03" x2 - PIR - Zigbee
-* TODO: LD2140 - DIY microwave "mmWave" presence detection (ESP & LD2410) - Wifi
+* Sonoff "SNZB-03" x8 - PIR (passive infrared) sensor - Zigbee
+* Tuya "ZY-M100-S_2" x2 - human presence sensor (5.8 GHz) - Zigbee
+* Sonoff "SNZB-06P" - human presence sensor (5.8 GHz) - Zigbee
+* Bed occupancy sensor - DIY with ESP32, see: https://medium.com/@qz_li/smart-bed-7de9ad55276e - Wifi
+* <s>LD2140 - DIY microwave "mmWave" presence detection (ESP & LD2410) - Wifi</s> - unused, "ready made 5.8 GHz sensors" used instead
 
 ### Weather
 
 * OpenWeatherMap - Internet
-* <s>Flughafen Nürnberg - Internet</s> - fail, due to unreliable data transfer!
 * [TuYa "WSD500A"](TuYa_WSD500A.md) - temperature & humidity sensor (window outside) - ZigBee
+* <s>Flughafen Nürnberg - Internet</s> - fail, due to unreliable data transfer!
 
-### Sensors
+### Indoor Air
 
-* [Xiaomi Mijia "LYWSD03MMC"](Xiaomi_Mijia_LYWSD03MMC.md) x10 - temperature & humidity sensor with LCD - BLE
-* Aqara "WSDCGQ11LM" - temperature & humidity & air pressure sensor - Zigbee
+* [Xiaomi Mijia "LYWSD03MMC"](Xiaomi_Mijia_LYWSD03MMC.md) x11 - temperature & humidity sensor with LCD - BLE
+* Aqara "WSDCGQ11LM" x2 - temperature & humidity & air pressure sensor - Zigbee
   * https://www.aqara.com/eu/temperature_humidity_sensor.html
 * [TuYa "WSD500A"](TuYa_WSD500A.md) - temperature & humidity sensor - Zigbee
-* Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
-* Sonoff "SNZB-04" - x2 - door / window sensor - Zigbee
-* ["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi
-* <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - temperature & humidity sensor with LCD - BLE</s> - fail, due to unreliable data transfer!
 * [Ikea "VINDRIKTNING"](Ikea_VINDRIKTNING.md) - DIY air quality (PM 2.5) sensor (ESP & VINDRIKTNING) - Wifi
-* [Oral-B "Genius X"](Oral-B_Genius_X.md) - toothbrush with sensors - Bluetooth
-* TODO: Adafruit "LTR390" -  DIY UV and ambient light sensor (ESP & LTR390) - Wifi
-* TODO: "BH1750" - DIY ambient light sensor (ESP & BH1750) - Wifi
 * TODO: TFA Doostmann AirCO2ntrol - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
 * TODO: Other air quality sensors
+* <s>["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi</s> - unused
+* <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - temperature & humidity sensor with LCD - BLE</s> - fail, due to unreliable data transfer!
+
+### Other Sensors
+
+* Xiaomi "GZCGQ01LM" x2 - light sensor - Zigbee
+* Sonoff "SNZB-04" x3 - door / window contact - Zigbee
+* [Oral-B "Genius X"](Oral-B_Genius_X.md) - toothbrush with sensors - Bluetooth
+* TODO: Aqara "SJCGQ11LM" water sensor - Zigbee
+  * https://www.aqara.com/eu/water_leak_sensor.html
+* TODO: Adafruit "LTR390" -  DIY UV and ambient light sensor (ESP & LTR390) - Wifi
+* TODO: "BH1750" - DIY ambient light sensor (ESP & BH1750) - Wifi
 
 ### Buttons & Input
 
 * Xiaomi Wireless Switch "WXKG01LM" - single button - Zigbee
+* Tuya "TS0044" x2 - 4 gang scene switch - Zigbee
 * IKEA TRÅDFRI "E1743" - double button - Zigbee
-* <s>IKEA STYRBAR "E2002" - quad button - Zigbee</s> unused
+* <s>IKEA STYRBAR "E2002" - quad button - Zigbee</s> - unused, its a bit bulky
 * <s>[Tuya Smart Knob](Tuya_Smart_Knob.md) "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee</s> unused (eats batteries?)
 * <s>Aqara Cube "MFKZQ01LM" - various actions - Zigbee
-  * https://www.aqara.com/eu/cube.html</s> unused
+  * https://www.aqara.com/eu/cube.html</s> unused, usage confuses me :-)
 
-### Display
+### Display & Control
 
-* <s>[LCD Character Display](LCD_Character_Display.md) - DIY 20x4 char display (ESP, PCF8574 & display) - Wifi</s> unused
-* TODO: Samsung Galaxy Tab A8 - Android tablet as display&controller - Wifi
+* Pritom "L8+" - 8" Android tablet as display & controller - Wifi
+* Samsung "Galaxy Tab A8" - 10.1" Android tablet as display & controller - Wifi
+* <s>[LCD Character Display](LCD_Character_Display.md) - DIY 20x4 char display (ESP, PCF8574 & display) - Wifi</s> unused, maybe used again later with 3D printed case
 
 ### Computer (over Wifi or LAN)
 
-* HASS.Agent - Windows client
-* Home Assistant - Android client
-* Ping - sensor
-* Web page - sensor (is web page available?)
-* Printer - sensor (e.g. toner level)
-* SNMP - sensor (e.g. printer page count)
+* HASS.Agent - Windows client with limited system monitor
+* Home Assistant - Android client with limited system monitor
+* System Monitor - values limited, as Home Assistant is running in a docker container
+  * https://www.home-assistant.io/integrations/systemmonitor/
+* Ping - sensor (tests if devices are available over LAN or Wifi)
+  * https://www.home-assistant.io/integrations/ping/
+* Web page - sensor (tests if web page is available)
+* Printer - sensor (e.g. printer toner level)
+* SNMP - sensor (e.g. printed page count)
+  * https://www.home-assistant.io/integrations/snmp/
 * [Wake-on-LAN](Wake_on_LAN.md) (WoL) - actor
 * <s>Speedtest - sensor</s> fail, no response!
-* TODO: Windows / Linux - System Monitor
 
 ### Unsorted TODO
 
 * TODO: Rhasspy Voice Control
 * TODO: Mi Body Composition Scale 2 - body scale
-* TODO: NFC
+* TODO: NFC tags
 * TODO: Infrared - IR-control in/out
 * TODO: OctoPrint ?
 * TODO: VideoCam input
 * TODO: Calendar / workday based alarm clock
 * TODO: Window blinds ?
-* TODO: Aqara "SJCGQ11LM" water sensor - Zigbee
-  * https://www.aqara.com/eu/water_leak_sensor.html
 * TODO: Bed occupancy sensor (ESP & HX711 based scale) - Wifi
 
 -------------------------------
