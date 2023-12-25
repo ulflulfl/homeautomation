@@ -93,6 +93,7 @@ Most devices should be very safe to use as they run with batteries, low voltages
 * Aqara "WSDCGQ11LM" x2 - temperature & humidity & air pressure sensor - Zigbee
   * https://www.aqara.com/eu/temperature_humidity_sensor.html
 * [Ikea "VINDRIKTNING"](Ikea_VINDRIKTNING.md) - DIY air quality (PM 2.5) sensor (ESP & VINDRIKTNING) - Wifi
+* [Sensirion "SHT31"](Sensirion_SHT31.md) - DIY temperature & humidity sensor - (ESP & SHT31) - Wifi
 * TODO: TFA Doostmann "AirCO2ntrol mini" - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
 * TODO: Other air quality sensors (DIY: Sensirion SPS30, SGP30, SCD41)
 * <s>["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi</s> - unused
