@@ -95,6 +95,7 @@ Most devices should be very safe to use as they run with batteries, low voltages
 * [Ikea "VINDRIKTNING"](Ikea_VINDRIKTNING.md) - DIY air quality (PM 2.5) sensor (ESP & VINDRIKTNING) - Wifi
 * [Sensirion "SHT31"](Sensirion_SHT31.md) - DIY temperature & humidity sensor - (ESP & SHT31) - Wifi
 * [Sensirion "SCD41"](Sensirion_SCD41.md) - DIY CO2, temperature & humidity sensor (ESP & SCD41) - Wifi
+* [Sensirion "SGP30"](Sensirion_SGP30.md) - DIY TVOC and eCO2 (ESP & SGP30) - Wifi
 * TODO: TFA Doostmann "AirCO2ntrol mini" - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
 * TODO: Other air quality sensors (DIY: Sensirion SPS30, SGP30, SCD41)
 * <s>["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi</s> - unused
