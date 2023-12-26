@@ -23,6 +23,9 @@ Technical data:
 For detailed infos about the SCD41 accuracy, see the datasheet:
 https://sensirion.com/media/documents/48C4B7FB/6426E14D/CD_DS_SCD40_SCD41_Datasheet_D1_052023.pdf
 
+More infos:
+* https://emariete.com/en/sensor-co2-sensirion-scd40-scd41/
+
 Aliexpress: 20 € (2023.12)
 
 --------
