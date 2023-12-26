@@ -10,8 +10,8 @@ Cheap temperature and humidity sensor with I2C interface
 Technical data:
 * Model: Sensirion SHT31
 * Functions: Temperature and humidity sensor
-* Measured temperature range: -40~125°C (accuracy: +-0.2°C typ. @0-90°C, resolution: 0.1°C)
-* Measured humidity range: 0~100% (accuracy: +-2% typ., resolution: 0.1%)
+* Measured temperature range: -40~125°C (accuracy: typ. +-0.2°C @0~90°C / max. +-0.4°C @-40~90°C, resolution: 0.1°C)
+* Measured humidity range: 0~100% (accuracy: typ. +-2% / max. +-2.5% @0~90%, resolution: 0.1%)
 * Dimensions (PCB): 13x10.5x3 mm
 * Interface: I2C
 * I2C address: 0x44 (optional: 0x45)
@@ -26,11 +26,9 @@ Aliexpress: ~2 € (2023.12)
 
 ## Hardware
 
-### Boards and other Parts
+### Bill of Material
 
 Beside the SHT31 on a breakout board, I'm using an ESP 8266 based "D1 mini" board. Other ESP 8266 or ESP 32 boards should work as well.
-
-### Bill of Material
 
 * SHT31 on breakout board
 * ESP 8266 "D1 mini" or alike
@@ -103,7 +101,7 @@ TODO: Screenshot
 
 ## Conclusion
 
-Without a calibrated thermometer / hygrometer its hard to tell if the SHT31 measurements are accurate. Comparing the SHT31 with the Xiaomi devices I have, the SHT31 "constantly" shows around 0.2 °C and 2% RH less - which is within the tolerances of the devices.
+Without a calibrated thermometer / hygrometer its hard to tell if the SHT31 measurements are accurate. Comparing the SHT31 with the Xiaomi devices I own, the SHT31 "constantly" shows around 0.2 °C and 2% RH less - which is within the tolerances of the devices.
 
 But, the SHT31 reacts much quicker to changes of temperature / humidity compared to the Bluetooth / Zigbee connected Xiaomi devices. However, as I'm running the SHT31 sensor without any housing right now, this may change if its put in a case.
 
