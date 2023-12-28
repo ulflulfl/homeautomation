@@ -178,12 +178,12 @@ As another "reference", I'm using my "AirCO2ntrol Mini" (which is a rebadged "Zy
 
 Hint: Calibrating the temperature is NOT needed for the CO2 measurements!
 
-The SCD41 has a specified typical temperature accuracy of +-0.8°C (@15-35 °C), a repeatability of +-0.1°C and a response time of 120s. Interestingly, no maximum accuracy is specified!
+The SCD41 has a specified typical temperature accuracy of +-0.8°C (@15-35 °C), a repeatability of +-0.1°C and a response time of 120s. Interestingly, the typical accuracy is specified, while the maximum isn't!
 
-After running the SCD41 for a day or two, the curve shapes in Home Assistant looked similiar between the "Sensirion SHT references", but the SCD41 showed permanently about  1.5°C too much. Adjusting the "temperature_offset" in ESPHome from the default 4.0°C to 5.5°C brought it much closer to the SHT31, which is the best temperature reference I currently own.
+After running the SCD41 for a day or two, the curve shapes in Home Assistant looked similiar between the "Sensirion SHT references" and the SCD41, but the SCD41 showed permanently about 1.5°C too much. Adjusting the "temperature_offset" in ESPHome from the default 4.0°C to 5.5°C brought it much closer to the SHT31, which is the best temperature reference I currently own.
 
-TODO: Add the difference between SCD41 and SHT31 after a few more days
-TODO: Add the difference between SCD41 and SHT45
+* TODO: Add the difference between SCD41 and SHT31 after a few more days
+* TODO: Add the difference between SCD41 and SHT45
 
 Hint: Calibrating the temperature will noticeably affect the humidity readings as well. Raising the "temperature_offset" by 1°C (4.5 to 5.5 °C) resulted in a ~3% RH raise.
 
@@ -195,7 +195,7 @@ With ESPHome you have three calibration options to choose from:
 
 * set a static altitude
 * set a static pressure
-* set a dynamic pressure using ESPHome lambdas (e.g. from a BMP280 sensor)
+* set a dynamic pressure from another source using ESPHome lambdas (e.g. from a BMP280 sensor)
 
 If I would use the sensor "mobile" especially in changing elevations, I would choose the last option.
 
@@ -207,15 +207,15 @@ For more details about the pressure / height calibrations have a look at the ESP
 
 At the start I compared the measured values with my "AirCO2ntrol Mini", I saw a more or less constant offset of around 300 ppm (the Mini always showed less), which I expected to be a calibration issue.
 
+There are two ways to calibrate the SCD41.
+
 #### CO2 Automatic Self Calibration (ASC)
 
 Hint: ASC is enabled by default.
 
 What these (ASC and other similiar) algorithms automatically do: Look for the lowest measured value of the last few days, expect this to be outside air with 400 ppm and set the calibration accordingly. However, from the SCD41 datasheet: "The ASC algorithm assumes that the sensor is exposed to air with CO2 concentrations of 400 ppm at least once per week". So obviously the ASC will "fail", if the sensor had no contact to fresh air over the last days - the "faulty" ASC calibration will cause the provided CO2 values to be (much) too low.
 
-In fact a day or two after initial setup, the SCD41 values suddenly dropped by ~350 ppm without an obvious external cause (I was sleeping at that time and there was no atmospheric pressure change). I expect this drop to be caused by an SCD41 automatic self calibration. After this "event", the "AirCO2ntrol Mini" constantly shows ~100 ppm more than the SCD41 (before it was 300 ppm less). I'm curious when the "next drop" will happen.
-
-This highlights another disadvantage of the ASC: The values will (suddenly) change without a notification.
+In fact a day or two after initial setup, the SCD41 values suddenly dropped by ~350 ppm without an obvious external cause (I was sleeping at that time and there was no atmospheric pressure change). I expect this drop to be caused by an SCD41 automatic self calibration. After this "event", the "AirCO2ntrol Mini" constantly shows ~100 ppm more than the SCD41 (before it was 300 ppm less). I'm curious when the "next drop" will happen. This highlights another disadvantage of the ASC: The values will (suddenly) change without a notification.
 
 TODO: Is there a way to retrieve the current calibration value(s), so an auto calibration event can at least be noticed?
 
@@ -229,7 +229,7 @@ However, when ASC is off and FRC is "forgotten", the CO2 values will probably "s
 
 Detailed instructions for the FRC procedure can be found in the SCD41 datasheet at section 3.7.1: "perform_forced_recalibration"
 
-TODO: I'm curious what the effects of a proper "fresh air FRC" later on will be.
+TODO: I'm curious what the effects of a proper "fresh air FRC" will be - I may try that after winter time ...
 
 -------------------------
 
