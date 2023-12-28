@@ -217,7 +217,7 @@ What these (ASC and other similiar) algorithms automatically do: Look for the lo
 
 In fact a day or two after initial setup, the SCD41 values suddenly dropped by ~350 ppm without an obvious external cause (I was sleeping at that time and there was no atmospheric pressure change). I expect this drop to be caused by an SCD41 automatic self calibration. After this "event", the "AirCO2ntrol Mini" constantly shows ~100 ppm more than the SCD41 (before it was 300 ppm less). I'm curious when the "next drop" will happen. This highlights another disadvantage of the ASC: The values will (suddenly) change without a notification.
 
-TODO: Is there a way to retrieve the current calibration value(s), so an auto calibration event can at least be noticed?
+Reading the datasheet: By default, an initial ASC will happen after 44 hours (which fits well in the timeframe of my "event" experience). After that, the ASC will be performed every 156 hours (which is 6.5 days). There seems to be no way to be noticed that an ASC actually happened (e.g. retrieve the current calibration settings or such).
 
 #### CO2 Forced Recalibration (FRC)
 
