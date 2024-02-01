@@ -25,7 +25,7 @@ Some links with additional infos:
 * https://blog.quindorian.org/2020/10/4-xiaomi-temperature-sensor-for-home-assistant.html/
 * https://hackaday.com/2020/12/08/exploring-custom-firmware-on-xiaomi-thermometers/
 
-With a custom firmware, you may even be able to convert the device from Bluetooth Low Energy to Zigbee! I haven't tried as this reduces battery life (~15-20%) and increases the update rate. More infos at: https://smarthomescene.com/guides/convert-xiaomi-lywsd03mmc-from-bluetooth-to-zigbee/
+With a custom firmware, you may even be able to convert the device from Bluetooth Low Energy to Zigbee! I haven't tried as this reduces battery life (~15-20%) and decreases the update rate. More infos at: https://smarthomescene.com/guides/convert-xiaomi-lywsd03mmc-from-bluetooth-to-zigbee/
 
 --------
 
