@@ -166,7 +166,7 @@ However, the SCD41 has a typical accuracy of +-0.8 °C and real life is even wor
 
 ### CO2 References
 
-Outside "fresh air" has a CO2 concentration slightly above 400 ppm. The ESPHome SCD41 page mentions 419 ppm for April 2022 and https://www.co2.earth/daily-co2 lists 422 ppm for December 2023. This can be used as a suitable CO2 reference gas.
+Outside "fresh air" has a CO2 concentration slightly above 400 ppm. The ESPHome SCD41 page mentions 419 ppm for April 2022 and https://www.co2.earth/daily-co2 lists **422 ppm for December 2023**. This can be used as a suitable CO2 reference gas.
 
 As another "reference", I'm using my "AirCO2ntrol Mini" (which is a rebadged "ZyAura ZGm053U"). It is running since 2018 with auto calibration. While it shows reasonable CO2 values since 2018, I'm unsure about the "reference quality" of it ...
 
