@@ -2,14 +2,14 @@
 
 How to build a **WiFi connected mono loudspeaker (aka: media player)** with an ESP32, a MAX98357 and a speaker.
 
-*State (2023.04): Speaker works and the sound quality is good. Works fine for radio and text-to-speech, but probably not as a "party boombox". Sometimes looses connection to home assistant, need to find out why ...*
+*State (2024.07): Speaker works and the sound quality is ok. Works fine for radio and text-to-speech, but probably not as a "party boombox".
 
 ![MAX98357 based box](images/MAX98357_box.jpg)
 *My 30+ year old Heco box -> my new Wifi connected and USB powered media player*
 
 ## ESPHome Media Player
 
-With an ESP32 (ESP8266 will not work!), a cheap MAX98357 (I2S DAC & amplifier chip) and a common loudspeaker you can build a simple media player for Home assistant. Read: A WiFi connected loudspeaker.
+With an ESP32 (ESP8266 will not work!), a cheap MAX98357 (mono I2S DAC & amplifier chip) and a common loudspeaker you can build a simple media player for Home assistant. Read: A WiFi connected loudspeaker.
 
 Media player basics: https://esphome.io/components/media_player/index.html#
 
@@ -19,9 +19,9 @@ Media player basics: https://esphome.io/components/media_player/index.html#
 
 I2S "Inter-IC Sound" https://en.wikipedia.org/wiki/I%C2%B2S is used to connect the ESP32 microcontroller with audio chips. I2S is available on the ESP32 only, an ESP8266 won't work.
 
-The ESPHome "I2S Audio Media Player" https://esphome.io/components/media_player/i2s_audio.html can use different I2S chips (e.g. MAX98357, NS4168 or UDA1334A), I've used an easily available MAX98357.
+The ESPHome "I2S Audio Media Player" https://esphome.io/components/media_player/i2s_audio.html can use different I2S chips (e.g. MAX98357 or NS4168), I've used an easily available MAX98357.
 
-All these chips contain a DAC https://en.wikipedia.org/wiki/Digital-to-analog_converter; a class D amplifier https://en.wikipedia.org/wiki/Class-D_amplifier and some other components in a single chip.
+All these chips contain a mono DAC https://en.wikipedia.org/wiki/Digital-to-analog_converter; a class D amplifier https://en.wikipedia.org/wiki/Class-D_amplifier and some other components in a single chip.
 
 The ESP32 internal DAC (8 bit) seems a bit noisy: https://community.home-assistant.io/t/esphome-i2s-media-player-internal-dac/434280 so this was not an option for me.
 
@@ -29,7 +29,7 @@ The ESP32 internal DAC (8 bit) seems a bit noisy: https://community.home-assista
 
 MAX98357:
 
-* I2S DAC and class D mono amplifier
+* Mono I2S DAC and class D amplifier
 * Output Power: 3.2W (4 Ω, 5V)
 * Output Power: 1.4W (8 Ω, 5V)
 * Supply Voltage: 2.5V to 5.5V
@@ -43,9 +43,9 @@ Aliexpress: Board with "connectors" ~3€ (2023.02)
 
 ### Connections
 
-Connect the MAX98357 to an ESP32 board:
+Connect the MAX98357 board to an ESP32 board:
 
-| MAX | color | ESP |
+| MAX98357 | color | ESP32 |
 | --- | --- | --- |
 | 5V | red | 5V |
 | GND | black | GND |
@@ -54,6 +54,9 @@ Connect the MAX98357 to an ESP32 board:
 | DIN | green | 25 |
 | BCLK | yellow | 27 |
 | LRC | white | 26 |
+
+Be careful to use the correct pin numbers on the ESP32. I'm using a nodemcu board, the pin numbering on other ESP32 boards may differ.
+
 
 More infos about connecting the hardware: https://circuitdigest.com/microcontroller-projects/esp32-based-internet-radio-using-max98357a-i2s-amplifier-board
 
@@ -68,7 +71,7 @@ I supply the ESP32 with 5V from a small USB power adapter (phone charger) and co
 
 As I'm using the box for "low volume" radio and alike, this works just fine. However, I haven't tested this as a "party boombox" ;-)
 
-TODO: Add Power consumption
+In idle, the ESP32 and MAX98357 together take: 5V * 0,05A = 0,25W
 
 ### The box
 I had an old unused set of Heco boxes (4Ω) around that I've bought already used 30+ years ago. They served me well for car stereo in my very first car - a [Renault 12](https://en.wikipedia.org/wiki/Renault_12).
@@ -85,9 +88,7 @@ Integrating the electronics was quite easy, the parts are held in place with som
 https://esphome.io/components/media_player/i2s_audio.html
 https://esphome.io/components/i2s_audio.html
 
-**Beware! Breaking change in: https://esphome.io/changelog/2023.4.0.html**
-
-Since 2023.4.1:
+You need at least ESPHome version 2023.4.1!
 
 ```
 i2s_audio:
@@ -102,22 +103,7 @@ media_player:
     mode: mono
 ```
 
-**Beware: In ESPHome 2023.4.0, the "I2S Media Player" was broken and quickly fixed in 2023.4.1!**
-
-Before 2023.4.0:
-
-```
-media_player:
-  - platform: i2s_audio
-    name: ESPHome I2S Media Player
-    dac_type: external
-    i2s_dout_pin: GPIO25
-    i2s_bclk_pin: GPIO27
-    i2s_lrclk_pin: GPIO26
-    mode: mono
-```
-
-Be careful to use the correct pin numbers. I'm using a nodemcu board, the pin numbering on other ESP32 boards may differ.
+There was a breaking change in ESPHome 2023.4.0 (https://esphome.io/changelog/2023.4.0.html) and in that version the "I2S Media Player" was broken.
 
 ## Home Assistant
 
