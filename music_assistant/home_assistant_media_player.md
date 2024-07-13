@@ -1,21 +1,21 @@
 # Connect a Home Assistant Media Player to Music Assistant
 
-The following describes how to connect Music Assistant with Home Assistant and how to add a Home Assistant media player (aka: speaker) to Music Assistant. It uses a speaker build with ESPHome as an example, but the steps for other speakers in Home Assistant should be similiar or identical. It also assumes that you are familiar with the usage of Home Assistant.
+The following describes how to prepare Music Assistant so it uses Home Assistant media players (aka: speakers). It uses a speaker build with ESPHome as an example, but the steps for other speakers in Home Assistant should be similiar or identical.
+
+State (2024.07): My Home Assistant speakers work fine in Music Assistant!
 
 My prerequisites:
 
 - Music Assistant running ok in a docker container, not yet connected to Home Assistant
 - Home Assistant running ok in a docker container
-- ESPhome based media player running ok in Home Assistant
-
-If you want to build an ESPHome based media player (aka: speaker) with ESP32 & MAX98357 on your own and add it to ESPHome/Home Assistant, have a look at: [MAX98357_Media_Player.md](../MAX98357_Media_Player.md)
+- Media player build with ESPhome running ok in Home Assistant
 
 Beware: I'm not sure if the following steps are slightly different if you use the Home Assistant Add-on instead of the docker containers.
 
+If you want to build an ESPHome based media player (aka: speaker) with ESP32 & MAX98357 on your own and add it to ESPHome/Home Assistant, please have a look at: [MAX98357_Media_Player.md](../MAX98357_Media_Player.md). If you know how to solder its cheap and easy.
+
 ## Check if speaker appears in Home Assistant
 To avoid trouble later on, check that the speaker appears in Home Assistant. This step depends on the type of media player to be used, in this example a speaker build with ESPHome/ESP32 is used.
-
-TODO: Is there a simple generic way in HASS to list all available media players?
 
 In Home Assistant go to Settings > Devices & Services > ESPHome > #your speaker# > device
 
@@ -23,7 +23,8 @@ In Home Assistant go to Settings > Devices & Services > ESPHome > #your speaker#
 
 The page should at least show the Controls as in the picture above. I've simply named my ESP32 device "heco" and the speaker entry "Speaker" but the actual names should not be important.
 
-TODO: Add some simple steps to actually test the speaker here
+TODO: Is there a simple generic way in HASS to list all available media players?
+TODO: Add some simple steps to actually test the speaker here?
 
 ## Add user "mass" to Home Assistant
 
@@ -52,15 +53,15 @@ In the appearing *Settings* page you need to enter the URL of the Home Assistant
 
 **Beware that the URL of your Home Assistant setup will very likely be different than the example below. So the URL will NOT be http://192.168.1.11:8123 for you!**
 
-Note down the URL of your Home Assistant instance and remove the part with the slashes (for example my Home Assistant dashboard is at http://192.168.1.11:8123/dashboard-test/home and the URL I need is: http://192.168.1.11:8123). Hostnames instead of IP addresses should also work.
+Note down the URL of your Home Assistant and remove the part with the slashes (for example my Home Assistant dashboard is at: http://192.168.1.11:8123/dashboard-test/home and the URL I need is: http://192.168.1.11:8123). It should also work to you use hostnames instead of IP addresses.
 
 In the *Generic settings* enter the URL of your Home Assistant instance and press (RE)AUTHENTICATE HOME ASSISTANT:
 
 ![images/MASS_HASS_provider_settings.png](images/MASS_HASS_provider_settings.png)
 
-A new browser tab will be opened automatically and shows the Home Assistant welcome page. If something else appears or you get an error, check the URL and connection.
+A new browser tab will be opened automatically and if HASS can be found at that URL, it shows the Home Assistant welcome page. If something else appears or you get an error, check the URL and connection.
 
-If HASS can be found at that URL, you can enter the user and password from above and press LOG IN:
+You can enter the user and password from above and press LOG IN:
 
 ![HASS_MASS_credentials.png](images/HASS_MASS_credentials.png)
 
@@ -84,8 +85,10 @@ In the appearing *Settings* page, select the *Player entities* to be used. MASS 
 
 ![](images/MASS_HASS_MediaPlayers.png)
 
-Just press SAVE and the speaker(s) should appear in the list of players:
+Just press SAVE and the speaker(s) should appear in the list of Players:
 
 ![](images/MASS_Players_heco.png)
 
 Beware: If you change the name of the player in ESPHome or Home Assistant later on, remember that you also need to reselect the *Player entities*.
+
+**Have fun with your "new speakers"!**
