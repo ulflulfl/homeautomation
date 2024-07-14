@@ -70,13 +70,13 @@ In the *Generic settings* enter the URL of your Home Assistant and press (RE)AUT
 
 ![images/MASS_HASS_provider_settings.png](images/MASS_HASS_provider_settings.png)
 
-A new browser tab will be opened automatically and if HASS can be found at that URL, it shows the Home Assistant welcome page. If something else appears or you get an error, check the URL and connection.
+A new browser tab will be opened automatically and if HASS can be found at the entered URL, it shows the Home Assistant welcome page. If something else appears or you get an error, check the URL and connection.
 
 You can enter the user and password from above and press LOG IN:
 
 ![HASS_MASS_credentials.png](images/HASS_MASS_credentials.png)
 
-You'll get back to the Music Assistant provider settings page. For a few seconds the page is "dimmed" and a "turning circle" appears while the connection is being established. Once that's done, just press SAVE and you've connected MASS to HASS :-)
+You'll get back to the Music Assistant provider settings page. For a few seconds that page is "dimmed" and a "turning circle" appears while the connection is being established. Once that's done, just press SAVE and you've connected MASS to HASS :-)
 
 If the connection fails, recheck your settings (user/pass, URL, ...) and the connection (firewall, VLAN, ...).
 
@@ -98,10 +98,12 @@ In the appearing *Settings* page, select the *Player entities* to be used. MASS 
 
 Just press SAVE.
 
-The speaker(s) should now appear in the list of Players, just press on the speaker icon (bottom right in the "play bar"):
+Beware: If you change the name of the player in ESPHome or Home Assistant later on, remember that you also need to reselect the *Player entities*.
+
+If you press on the speaker icon (bottom right in the "play bar"), the speaker(s) should now appear in the list of Players:
 
 ![](images/MASS_Players_heco.png)
 
-Beware: If you change the name of the player in ESPHome or Home Assistant later on, remember that you also need to reselect the *Player entities*.
+In the Players settings (Home > Settings (cog icon top right) > Players (speaker icon top right)) you can change various player settings, but that's a different story ...
 
 **Have fun with your "new speakers"!**
