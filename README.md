@@ -71,7 +71,7 @@ Most devices should be very safe to use as they run with batteries, low voltages
 * TODO: Rhasspy ?
 * <s>MaryTTS - text to speech engine - Wifi/LAN</s> - TTS on Android tablet used instead
 * <s>[RTTTL buzzer](RTTTL_buzzer.md) - DIY RTTTL player (ESP & Rtttl Buzzer) - Wifi</s> - TTS on Android tablet used instead
-* <s>[MAX98357 Media Player](MAX98357_Media_Player.md) - DIY Wifi speaker (ESP32 & MAX98357) - Wifi</s> - unused
+* <s>[MAX98357 Media Player](audio/MAX98357_Media_Player.md) - DIY Wifi speaker (ESP32 & MAX98357) - Wifi</s> - unused
 
 ### Occupancy
 

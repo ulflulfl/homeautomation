@@ -31,7 +31,7 @@ I didn't dig very deep and will probably have a second try on it.
 Then I've tried my old DIY Heco speaker "recently" equipped with ESP32 & MAX98357 (Mono DAC & 3W amplifier) that is working ok in Home Assistant. This way I checked if Music Assistant works with it. The setup in Music Assistant was easy once the connection between MASS and HASS was ok.
 
 * [Home Assistant Media Player in Music Assistant](home_assistant_media_player.md) (how to setup the media player in MASS)
-* Build your own [MAX98357 media player](../MAX98357_Media_Player.md) (many detailed DIY infos)
+* Build your own [MAX98357 media player](MAX98357_Media_Player.md) (many detailed DIY infos)
 
 **The speaker chassis quality is not suitable for intense listening** but proved that this way works stable with Music Assistant and encouraged me to try the setup with ESP32 & PCM5102A below.
 

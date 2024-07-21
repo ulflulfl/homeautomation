@@ -12,7 +12,7 @@ My prerequisites:
 
 Beware: I'm not sure if the following steps are slightly different if you use the Home Assistant Add-on instead of the plain docker containers.
 
-If you want to build an ESPHome based media player (aka: speaker) with ESP32 & MAX98357 on your own and add it to ESPHome/Home Assistant, please have a look at: [MAX98357_Media_Player.md](../MAX98357_Media_Player.md). If you know how to solder its cheap and easy.
+If you want to build an ESPHome based media player (aka: speaker) with ESP32 & MAX98357 on your own and add it to ESPHome/Home Assistant, please have a look at: [MAX98357_Media_Player.md](MAX98357_Media_Player.md). If you know how to solder its cheap and easy.
 
 ## Further Infos
 
