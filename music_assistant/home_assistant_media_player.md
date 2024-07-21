@@ -16,6 +16,8 @@ If you want to build an ESPHome based media player (aka: speaker) with ESP32 & M
 
 ## Further Infos
 
+A brief installation instruction for Home Assistant together with Music Assistant can be found here: https://music-assistant.io/integration/installation/
+
 Known issues and notes about the "Home Assistant Player Provider" in Music Assistant can be found at: https://music-assistant.io/player-support/ha/ (especially have a look at the "Be aware" box about limited support!)
 
 General support for Music Assistant: https://music-assistant.io/support/
