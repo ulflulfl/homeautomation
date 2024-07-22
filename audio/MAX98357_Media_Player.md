@@ -19,11 +19,9 @@ Media player basics: https://esphome.io/components/media_player/index.html#
 
 I2S "Inter-IC Sound" https://en.wikipedia.org/wiki/I%C2%B2S is used to connect the ESP32 microcontroller with audio chips. I2S is available on the ESP32 only, an ESP8266 won't work.
 
-The ESPHome "I2S Audio Media Player" https://esphome.io/components/media_player/i2s_audio.html can use different I2S chips (e.g. MAX98357 or NS4168), I've used an easily available MAX98357.
+More I2S details at: [I2S and ESP32](I2S_and_ESP32.md)
 
-All these chips contain a mono DAC https://en.wikipedia.org/wiki/Digital-to-analog_converter; a class D amplifier https://en.wikipedia.org/wiki/Class-D_amplifier and some other components in a single chip.
-
-The ESP32 internal DAC (8 bit) seems a bit noisy: https://community.home-assistant.io/t/esphome-i2s-media-player-internal-dac/434280 so this was not an option for me.
+The MAX98357 contains a mono DAC https://en.wikipedia.org/wiki/Digital-to-analog_converter, a class D amplifier https://en.wikipedia.org/wiki/Class-D_amplifier and some other components in a single chip.
 
 ### MAX98357 Board
 
@@ -36,7 +34,7 @@ MAX98357:
 
 Datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/MAX98357A-MAX98357B.pdf
 
-Aliexpress: Board with "connectors" ~3€ (2023.02)
+Aliexpress: Board with "connectors" ~2€ (2024.07)
 
 ![MAX98357 board](images/MAX98357_board.jpg)
 *MAX98357 board*
@@ -78,7 +76,7 @@ I had an old unused set of Heco boxes (4Ω) around that I've bought already used
 
 Integrating the electronics was quite easy, the parts are held in place with some wood screws and zip ties, the not shown damping mat avoids any rattling ...
 
-![MAX98357 board](images/MAX98357_box_inside.jpg)
+![MAX98357 inside the box](images/MAX98357_box_inside.jpg)
 *Inside the box "DIY style"*
 
 ------
