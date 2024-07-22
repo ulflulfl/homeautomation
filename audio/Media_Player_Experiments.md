@@ -1,4 +1,4 @@
-# Media Player
+# Media Player Experiments
 
 My speaker experiments (aka: "media player") for Music Assistant.
 
@@ -40,13 +40,6 @@ Then I've tried my old DIY Heco speaker "recently" equipped with ESP32 & MAX9835
 I now created a DIY "WiFi stereo audio bridge" to my existing amplifier with an ESP32 WROOM & PCM5102A (Stereo DAC) using ESPHome. This simply "converts" WiFi to audio without any EQ or other options. I've read many times that you should use squeezelite for DIY with an ESP32 WROVER (but without explanations why). So I wasn't sure if my simpler setup would work at all, produces sound problems or whatever.
 
 * [Home Assistant Media Player in Music Assistant](home_assistant_media_player.md) (how to setup the media player in MASS)
-* TODO: Build your own [PCM5102A media player]
+* Build your own [PCM5102A media player](PCM5102A_Media_Player.md) (many detailed DIY infos)
 
-PCM5102A hardware infos:
-
-* https://todbot.com/blog/2023/05/16/cheap-stereo-line-out-i2s-dac-for-circuitpython-arduino-synths/ PCM5102A Pinout
-* https://macsbug.wordpress.com/2021/02/19/web-radio-of-m5stack-pcm5102a-i2s-dac/
-* https://raspberrypi.stackexchange.com/questions/76188/how-to-make-pcm5102-dac-work-on-raspberry-pi-zerow bridging pads and other explanations by riban
-
-
-Well, **it works nice.**
+Well, **it works good.**
