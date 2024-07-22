@@ -31,7 +31,7 @@ The PCM5102A contains a stereo DAC https://en.wikipedia.org/wiki/Digital-to-anal
 Features:
 
 * Stereo I2S DAC (no power amplifier)
-* Supply Voltage: 3.3V or 5V (board has low drop voltage regulator and can be supplied with both 3.3 or 5V)
+* Supply Voltage: 3.3V or 5V (board has a low drop voltage regulator and can be supplied with both 3.3 or 5V)
 * SNR: 112 dB
 * Sampling frequency: 8 kHz to 384 kHz
 * Output to 3.5 mm stereo "headphone" jack or solder pins
@@ -41,7 +41,7 @@ Features:
 
 Datasheet: https://www.ti.com/lit/gpn/pcm5102a
 
-Aliexpress: ~3 € (2024.07)
+Aliexpress: ~2 € (2024.07)
 
 Additional info links:
 * https://todbot.com/blog/2023/05/16/cheap-stereo-line-out-i2s-dac-for-circuitpython-arduino-synths/ PCM5102A PCB pinout and more
