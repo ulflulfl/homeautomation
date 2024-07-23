@@ -55,17 +55,21 @@ There are five pins to configure the PCM5102A operating mode. There are solder p
 Some boards seem to come with presoldered pads. My pads were "unpopulated", so I had to solder the pads myself.
 
 ![PCM5102A_PCB_bottom.jpg](images/PCM5102A_PCB_bottom.jpg)
-*PCM5102A board bottom side with four jumper pads "H1L" to "H4L"*
+*PCM5102A board bottom side with four "unpopulated" solder pads "H1L" to "H4L"*
 
-| Pin | PCB Pad | Set to ... | Description | High | Low |
+Connect the solder pads:
+
+| Pin | Description | PCB Pad | Set to ... | High | Low |
 | --- | --- | --- | --- | --- | --- |
-| FLT | H1L (bottom) | L (GND) |  Filter select | Low latency (slightly poorer response) | **Normal latency** |
-| DEMP | H2L (bottom) | L (GND) | De-emphasis for 44.1 kHz | on | **off (De-emphasis not needed)** |
-| XSMT | H3L (bottom) | H (3V3) | Soft mute control| **Output not muted?** | Output muted? |
-| FMT | H4L (bottom) | L (GND) | Audio format | Left-justified | **I2S format** |
-| SCK | SCK (top) | GND | System clock input | - | **Use internally generated system clock (PLL)** |
+| FLT  | Filter select | H1L (bottom) | L (GND) | Low latency (slightly poorer response) | **Normal latency** |
+| DEMP | De-emphasis for 44.1 kHz | H2L (bottom) | L (GND) | on | **off (De-emphasis not needed)** |
+| XSMT | Soft mute control | H3L (bottom) | H (3V3) | **Output not muted** | Output muted |
+| FMT | Audio format | H4L (bottom) | L (GND) | Left-justified | **I2S format** |
+| SCK | System clock input | SCK (top) | GND  | - | **Use internally generated system clock (PLL)** |
 
-XSMT can be connected to a GPIO pin to control output mute. I haven't tries this.
+Connecting the middle pad to H connects it to digital 3.3 V, connecting it to L will set it to ground. After soldering the pads, make sure that you didn't accidentially shortened H with L.
+
+XSMT can be connected to a GPIO pin to control output mute. I couldn't notice any difference between setting this pin to low or to set the volume to zero. If you experiment with this pin, don't forget to remove the connection on solder pads H3L.
 
 ![PCM5102A_top_pads.jpg](images/PCM5102A_top_pads.jpg)
 *Soldered pads on the bottom side*
@@ -75,16 +79,30 @@ XSMT can be connected to a GPIO pin to control output mute. I haven't tries this
 
 ### Connections
 
-Now its time to connect the PCM5102A with the ESP32
+Now its time to connect the PCM5102A with the ESP32. All necessary connection pins are on the shorter pin row.
 
-| PCM5102A | jumper cable color | ESP32 | Remark |
-| --- | --- | --- | --- |
-| SCK | brown |  not connected | pad to GND on PCM PCB is used instead |
-| BCK | red  | GPIO27 | BCLK (bit clock) |
-| DIN | orange | GPIO25 | DOUT (data) |
-| LRCK | yellow | GPIO26 | LRCLK (left right clock / word select) |
-| GND | green | GND
-| VIN | blue | 3.3V or 5V | both will work, I'm using 5V |
+| PCM5102A | ESP32 | ESPHome yaml | Description | Remark |
+| --- | --- | --- | --- | --- |
+| SCK | (not connected) | - | system clock input | solder pad "SCK to GND" on PCM PCB is used |
+| BCK | GPIO27 | i2s_bclk_pin | I2S BCLK (bit clock) |
+| DIN | GPIO25 | i2s_dout_pin | I2S DOUT (data) |
+| LRCK / LCK | GPIO26 | i2s_lrclk_pin | I2S LRCLK (left right clock / word select) |
+| GND | GND | - | ground |
+| VIN | VIN | - | power supply | 3.3V or 5V will work, I'm using 5V here |
+
+The connection pins on the longer pin row are usually not needed.
+
+| PCM5102A | Description | Remark |
+| --- | --- | --- |
+| FLT | Filter select input | Same as middle pad of H1L |
+| DEMP | De-emphasis for 44.1 kHz input | Same as middle pad of H2L |
+| XSMT | Soft mute control input | Same as middle pad of H3L |
+| FMT | Audio format input | Same as middle pad of H4L |
+| A3V3 | Analog 3.3V output | Output of the analog side 3.3V voltage regulator |
+| AGND | Analog ground | Same as on 3.5 mm stereo jack |
+| ROUT | Right analog output | Same as on 3.5 mm stereo jack |
+| AGND | Analog ground | Same as on 3.5 mm stereo jack |
+| LOUT | Left analog output | Same as on 3.5 mm stereo jack |
 
 An audio cable connects the 3.5 mm stereo jack output with the cinch/RCA inputs of my power amplifier for left and right.
 
@@ -92,7 +110,7 @@ An audio cable connects the 3.5 mm stereo jack output with the cinch/RCA inputs 
 
 I supply the ESP32 with 5V from a small USB power adapter (phone charger) and connect the ESP32 5V to the PCM board.
 
-The PCM5102A board has two low drop voltage regulators (one for the analog and one for the digital circuit), you can supply the board with 3.3 or 5V.
+You can supply the PCM5102A board with 3.3 or 5V. The PCB has two 3.3V low drop voltage regulators (one for the analog and one for the digital circuit).
 
 At idle, the ESP32 and PCM5102A together take: 5V * 0.13A = 0.65W
 
@@ -100,7 +118,7 @@ At idle, the ESP32 and PCM5102A together take: 5V * 0.13A = 0.65W
 
 ## ESPHome
 
-The initial ESP32 board setup is described at: [ESP Init for ESPHome](../esphome/ESP_init.md)
+The initial ESP32 board setup in ESPHome is described at: [ESP Init for ESPHome](../esphome/ESP_init.md)
 
 ESPHome infos about the I2S yaml config:
 
@@ -166,8 +184,8 @@ I'm primarily using Node-RED for Automation, but similiar can be done with Home 
 ## Troubleshooting: Pop noises
 
 When playing tracks:
-* two low volume short pop noises when play starts
-* one mid volume short pop/crack noise when play stops
+* two very low volume short pop noises when play starts
+* one low volume short pop/crack noise when play stops
 
 While both are slightly annoying, they are not so loud that it's really an issue. However, I had a look if its possible to avoid this.
 
@@ -176,9 +194,11 @@ https://e2e.ti.com/support/audio-group/audio/f/audio-forum/765759/pcm5102-pop-no
 
 The pops seem to happen when the PCM5102A goes into or gets out of sleep mode (can't find the source again).
 
-This may also be caused by a counterfeit chip/board that I got from aliexpress.
+This may also be caused by a counterfeit chip / board that I got from aliexpress.
 
-TODO: I need to further investigate this ...
+When I set up another ESP32 & PCM5102A media player, I noticed that the two pop noises at play start are still there but the "more annoying" pop/crack noise at stop simply doesn't happen :-)
+
+I've also checked the output mute pin XSMT. Even if it's set to mute, the two pop noises at play start still happen. It seems there is not a lot more that can be done about it.
 
 -------------------------
 
@@ -236,11 +256,12 @@ Seems the hum was caused by my "sensitive" audio amplifier and a very high outpu
 
 ## Conclusion
 
-I wanted to play music using Music Assistant with a decent quality. My first attempt with squeezelite on ESP32 failed as it has two many poorly documented parameters/options. A quick try with my [MAX98357 Media Player](MAX98357_Media_Player.md) showed that the ESP32 & I2S DAC combo in Home Assistant could work. As the PCM5102A is only a few € I tried and it works good for me, the sound quality is really good.
+I wanted to play music using Music Assistant with a decent quality. So the idea was to have an "audio WiFi bridge" to my existing audio amplifier/speaker setup.
 
-However some quirks remain. The usability issues mentioned in [Music Assistant](#music-assistant) are probably software problems that can be resolved. The pop noises mentioned in [Troubleshooting: Pop noises](#troubleshooting-pop-noises) when the playing starts/stops are likely PCM5102A specific, maybe this can be improved. Both topics need further investigation.
+My first attempt with squeezelite on ESP32 failed as it has two many poorly documented parameters/options. A quick try with my [MAX98357 Media Player](MAX98357_Media_Player.md) showed that the ESP32 & I2S DAC combo in Home Assistant works. As the PCM5102A is only a few € I tried and it works good for me, **the sound quality is really good**.
 
-It's mentioned that the output jack can drive most headphones: https://todbot.com/blog/2023/05/16/cheap-stereo-line-out-i2s-dac-for-circuitpython-arduino-synths/
-TODO: Try with a Koss PortaPro.
+However some quirks remain. The usability issues mentioned in the [Music Assistant](#music-assistant) section are probably software problems that can be resolved - needs further investigation. The two very low volume pop noises mentioned in [Troubleshooting: Pop noises](#troubleshooting-pop-noises) when the playing starts are likely PCM5102A specific and seems to be unavoidable with it.
+
+It's mentioned that the output jack can drive most headphones: https://todbot.com/blog/2023/05/16/cheap-stereo-line-out-i2s-dac-for-circuitpython-arduino-synths/ I've tried it with a Koss Porta Pro, sound quality is ok but could be better.
 
 All in all I'm quite happy with the PCM5102A but its not perfect!

@@ -6,11 +6,11 @@ I2S is available on the ESP32 (incl. ESP32 WROOM, ESP32 WROVER, ESP32 S2, ESP32 
 
 ## I2S Audio Output
 
-The ESPHome "I2S Audio Media Player" https://esphome.io/components/media_player/i2s_audio.html can use different I2S chips (e.g. UDA1334A, PCM5102A or MAX98357).
-
-These chips contain a mono or stereo DAC https://en.wikipedia.org/wiki/Digital-to-analog_converter and some other components in a single chip. Some contain a mono audio power amplifier.
+The I2S output chips contain a mono or stereo DAC https://en.wikipedia.org/wiki/Digital-to-analog_converter and some other components in a single chip. Some contain a mono audio power amplifier.
 
 The ESP32 also has an internal DAC (8 bit), but that seems to be a bit noisy: https://community.home-assistant.io/t/esphome-i2s-media-player-internal-dac/434280 so this is not an option for me.
+
+The ESPHome "I2S Audio Media Player" https://esphome.io/components/media_player/i2s_audio.html can use different I2S chips (e.g. UDA1334A, PCM5102A or MAX98357).
 
 ## I2S Audio Input
 
