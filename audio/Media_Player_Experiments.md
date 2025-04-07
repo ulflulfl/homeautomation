@@ -9,7 +9,7 @@ State (2024.07): My DIY ESP32 & PCM5102A media player connected to the existing 
 My recently bought Sonos speakers (Ikea Symfonisk Bookshelf Gen.2) currently (2024.07) have trouble of **"randomly" re- and disappearing** from Music Assistant (bugfix/reimplementation work seems to be currently ongoing).
 
 * [Ikea Symfonisk Bookshelf Gen.2](https://www.ikea.com/de/de/p/symfonisk-regal-wifi-speaker-weiss-smart-generation-2-50506587/) (Ikea Deutschland)
-* [https://music-assistant.io/player-support/sonos/](https://music-assistant.io/player-support/sonos/) (Music Assistant: Sonos specific infos)
+* [https://www.music-assistant.io/player-support/sonos/](https://www.music-assistant.io/player-support/sonos/) (Music Assistant: Sonos specific infos)
 
 Initially, the Music Assistant "playbar" wasn't noticing when the speaker is playing something - so I could start a track but couldn't even stop the playing. Reason for this was the firewall (ufw) on the docker container host which "filtered" the notifications from the speaker to Music Assitant.
 

@@ -117,7 +117,7 @@ Most devices should be very safe to use as they run with batteries, low voltages
 * Tuya "TS0044" x2 - 4 gang scene switch - Zigbee
 * IKEA TRÅDFRI "E1743" - double button - Zigbee
 * <s>IKEA STYRBAR "E2002" - quad button - Zigbee</s> - unused, its a bit bulky
-* <s>[Tuya Smart Knob](Tuya_Smart_Knob.md) "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee</s> unused (eats batteries?)
+* <s>[Tuya Smart Knob](TuYa_Smart_Knob.md) "ERS-10TZBVK-AA" - button & rotary encoder - Zigbee</s> unused (eats batteries?)
 * <s>Aqara Cube "MFKZQ01LM" - various actions - Zigbee</s> - unused, usage confuses me :-)
   * <s>https://www.aqara.com/eu/cube.html</s>
 

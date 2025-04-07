@@ -4,7 +4,7 @@ Teaser line **bold important parts**
 
 *State (2023.04): What's working and what not*
 
-![image description](images/image.jpg)
+![image description](./images/SPS30.jpg)
 *Image description*
 
 Features (or technical data):
