@@ -122,7 +122,7 @@ Creating artist.nfo files manually can be a lot of work. Here are some hints to 
 * Wikipedia: The artists page first section usually contains a good biography text.
   * Example: https://en.wikipedia.org/wiki/Sting_(musician)
   * I simply copy the text of the first few sections
-  * I manually remove reference notes, like: [7]
+  * I manually remove reference notes, like: ```[7]```
   * Seems replacing special chars like " with &qout; isn't necessary (at least for Music Assistant)
   * I'll add the link to the page at the bottom: https://en.wikipedia.org/wiki/Sting_(musician) (unfortunately, Music Assistant will not create a clickable link of that)
 
