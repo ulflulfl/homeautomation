@@ -1,5 +1,7 @@
 # Home Automation of ulfl
 
+![md-linkcheck](https://github.com/ulflulfl/homeautomation/actions/workflows/md-linkcheck.yaml/badge.svg)
+
 Home automation related infos. Collected for myself, but may help others ...
 
 ## Server
