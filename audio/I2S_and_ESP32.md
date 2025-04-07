@@ -20,16 +20,23 @@ I couldn't find an ADC "analog audio in" breakout board, that could be used to d
 
 ## I2S Chip Overview
 
-Likely incomplete overview (2024.07) of easy to purchase "breakout boards" with I2S chips:
+Likely incomplete overview (2024.07) of cheap and easy "breakout boards" with I2S chips:
 
 | Chip | Function | Price for PCB | Remarks | Link | Picture |
 | --- | --- | --- | --- | --- | --- |
-| PCM5102A | Stereo DAC | ~2 € | 112 bB SNR | [PCM5102A Media Player](PCM5102A_Media_Player.md) | ![PCM5102A](images/PCM5102A_PCB_top.jpg) |
-| PCM5122A | Stereo DAC | ~15 € | PCM5102A with I2C config? PCB designed as "Pi hat" | https://esphome.io/components/media_player/i2s_audio.html |
-| UDA1334A | Stereo DAC | ~4 € | Chip seems discontinued | https://esphome.io/components/media_player/i2s_audio.html |
-| MAX98357 | Mono DAC & 3W power amplifier | ~2 € | 3W (4 Ω), 1.4W (8 Ω) | [MAX98357 Media Player](MAX98357_Media_Player.md) | ![MAX98357 board](images/MAX98357_board.jpg) |
-| NS4168 | Mono DAC & 2.5W power amplifier | ~14 € | Only as M5Stack module, no standalone PCB | https://esphome.io/components/media_player/i2s_audio.html |
-|INMP441 | Mono microphone | ~2 € | | https://esphome.io/components/microphone/i2s_audio.html | ![INMP441](images/INMP441.jpg) |
+| PCM5102A | Stereo DAC | ~2€ | 112 bB SNR | [PCM5102A Media Player](PCM5102A_Media_Player.md) | ![PCM5102A](images/PCM5102A_PCB_top.jpg) |
+| UDA1334A | Stereo DAC | ~4€ | Chip seems discontinued | https://esphome.io/components/media_player/i2s_audio.html |
+| MAX98357 | Mono DAC & 3W power amplifier | ~2€ | 3W (4 Ω), 1.4W (8 Ω) | [MAX98357 Media Player](MAX98357_Media_Player.md) | ![MAX98357 board](images/MAX98357_board.jpg) |
+|INMP441 | Mono microphone | ~2€ | | https://esphome.io/components/microphone/i2s_audio.html | ![INMP441](images/INMP441.jpg) |
+
+Some examples of other I2S chips:
+
+|Chip| Function | Price for PCB | Remarks | Link |
+| --- | --- | --- | --- | --- |
+| NS4168 | Mono DAC & 2.5W power amplifier | ~14€ | Only as M5Stack module, no standalone PCB | https://esphome.io/components/media_player/i2s_audio.html |
+| PCM5100A | Stereo DAC | ~20€ | Predecessor to PCM5102A (which seems to be better) | HiFi-ESP32: https://www.tindie.com/products/sonocotta/hifi-esp32/ |
+| PCM5122A | Stereo DAC | ~15€ | Same as PCM5102A with I2C config? PCB designed as "Pi hat" | https://esphome.io/components/media_player/i2s_audio.html |
+|TAS5805M|DAC & 2x23W stereo / 1x45W mono amplifier | ~30€ | - | Louder-ESP32: https://sonocotta.com/louder-esp32/, https://www.elecrow.com/louder-esp32.html, https://www.tindie.com/products/sonocotta/louder-esparagus-media-center/ |
 
 ## Bus Lines
 
