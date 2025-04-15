@@ -1,6 +1,6 @@
 # Home Automation of ulfl
 
-![md-linkcheck](https://github.com/ulflulfl/homeautomation/actions/workflows/md-linkcheck.yaml/badge.svg)
+![md-linkcheck](https://github.com/ulflulfl/homeautomation/actions/workflows/md-linkcheck.yaml/badge.svg) ![Spell check](https://github.com/ulflulfl/homeautomation/actions/workflows/spellcheck.yaml/badge.svg)
 
 Home automation related infos. Collected for myself, but may help others ...
 
