@@ -41,7 +41,7 @@ The connection to one LYWSD03MMC in the basement failed at the beginning (slight
 The accuracy is listed in the user manual (±0.1°C and ±1% RH), but that's probably not the accuracy but simply the resolution.
 
 ![LYWSD03MMC_15_times.jpg](images/LYWSD03MMC_15_times.jpg)
-*Fitfteen LYWSD03MMC after running a few hours at the same spot ...*
+*Fifteen LYWSD03MMC after running a few hours at the same spot ...*
 
 As I don't own a "known good thermometer", I've compared several of the devices to check at least the variance. The first row was bought 2022.02 and was already running for a few weeks. The remaining ten were bought 2023.02 and were fresh out of the box. All were using the custom ATC firmware. The temperature variance of 0.2 °C looks pretty good. The humidity variance of 3% is ok for me. Of course, an absolute error can't be detected this way and the long term stability is yet another question ...
 

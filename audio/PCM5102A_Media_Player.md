@@ -67,7 +67,7 @@ Connect the solder pads:
 | FMT | Audio format | H4L (bottom) | L (GND) | Left-justified | **I2S format** |
 | SCK | System clock input | SCK (top) | GND  | - | **Use internally generated system clock (PLL)** |
 
-Connecting the middle pad to H connects it to digital 3.3 V, connecting it to L will set it to ground. After soldering the pads, make sure that you didn't accidentially shortened H with L.
+Connecting the middle pad to H connects it to digital 3.3 V, connecting it to L will set it to ground. After soldering the pads, make sure that you didn't accidentally shortened H with L.
 
 XSMT can be connected to a GPIO pin to control output mute. I couldn't notice any difference between setting this pin to low or to set the volume to zero. If you experiment with this pin, don't forget to remove the connection on solder pads H3L.
 
@@ -162,7 +162,7 @@ Beware: If you uncheck "Enable queue flow mode" in the player, play will stop af
 
 Current issues (2024.07):
 * After playing a file (or album), the player pauses for a minute and then starts playing the same again and again until its manually stopped. Don't know if this is caused by the media player, Home Assistant or Music Assistant. TODO: Needs further investigation
-* Both ESPHome and Home Assistant will notice a dis- or reappearing media player in a resonable amount of time. Music Assistant often does not notice this "state change" at all or it takes VERY long. Workaround is to remove the player completely from the "Home Assistant MediaPlayers" and add it again. TODO: Needs further investigation
+* Both ESPHome and Home Assistant will notice a dis- or reappearing media player in a reasonable amount of time. Music Assistant often does not notice this "state change" at all or it takes VERY long. Workaround is to remove the player completely from the "Home Assistant MediaPlayers" and add it again. TODO: Needs further investigation
 
 ## Node-RED
 
@@ -177,7 +177,7 @@ The full Data string is:
 
 Obviously you can add a corresponding "volume down" node by using "- 0.05".
 
-I'm primarily using Node-RED for Automation, but similiar can be done with Home Assistant automations.
+I'm primarily using Node-RED for Automation, but similar can be done with Home Assistant automations.
 
 -------------------------
 
@@ -238,7 +238,7 @@ Soldered a 470 Ohm resistor between each signal output and GND of the PCM5102A t
 -> don't know it that is the "correct" solution, but it "works for me"
 
 ![PCM5102A_resistors.jpg](images/PCM5102A_resistors.jpg)
-*Two 470 Ohm resistors soldered between the output pins and gound to lower the output impedance*
+*Two 470 Ohm resistors soldered between the output pins and ground to lower the output impedance*
 
 I've also tried to lower the resistor value down to 100 Ohm, but then the maximum achievable volume level is decreased significantly. It seems the PCM5102A cannot drive such a low resistance. The PCM5102 datasheet from TI lists: "Analog output / Load impedance: MIN 1 kOhm" so even my 470 Ohm resistor is already "a bit low". If I'm using a higher resistor (1 kOhm), the humming appears again. For comparison: My old CD player has a measured output resistance of 100 Ohm, my tuner has 4k5 Ohm.
 

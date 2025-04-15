@@ -1,6 +1,6 @@
 # DeLonghi Inissio (Nespresso) Power Consumption
 
-TODO: Add a photo 
+TODO: Add a photo
 
 ## Standby
 The Inissio doesn't have a proper power switch that actually disconnects it from the grid, so it drains power even if its not in use. The question is:
@@ -44,4 +44,4 @@ The power consumption of the Inissio itself is surprisingly low. Consumption in 
 
 (0,02 kWh x 365 = 7,3 kWh, @41ct/kWh => 3 €)
 
-However, the production of the aluminium capsules is a different topic ...
+However, the production of the aluminum capsules is a different topic ...

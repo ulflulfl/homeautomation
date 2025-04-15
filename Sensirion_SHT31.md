@@ -2,7 +2,7 @@
 
 Cheap temperature and humidity sensor with I2C interface
 
-*State (2023.12): Working just fine with ESPHome / Home Assistant. However, more accurate successor model series SHT4x are already available for a similiar price*
+*State (2023.12): Working just fine with ESPHome / Home Assistant. However, more accurate successor model series SHT4x are already available for a similar price*
 
 ![image description](images/SHT31.jpg)
 *SHT31 board with connection wires (the orange wire is not connected)*
@@ -53,13 +53,13 @@ It's important to connect the "AD" pin on the board (from the datasheet: "do not
 
 There is also an alarm output AL (ALERT) pin which I haven't used.
 
-### Pullup Resistors
+### Pull-up Resistors
 
-The breakout board includes two 10k pullup resistors (marked "103") for SCL and SDA which are not necessary, as the ESP8266 controller already has internal pullup resistors. If too many boards are connected that have such pullup resistors, you may encounter I2C communication problems. In this case you can remove these resistors on the SHT31 board. However, my setup is working fine ...
+The breakout board includes two 10k pull-up resistors (marked "103") for SCL and SDA which are not necessary, as the ESP8266 controller already has internal pull-up resistors. If too many boards are connected that have such pull-up resistors, you may encounter I2C communication problems. In this case you can remove these resistors on the SHT31 board. However, my setup is working fine ...
 
 ### Power Supply & Consumption
 
-The SHT31 takes only 1,5 mA (max.) and can easily be powered by the 3.3V from the D1 mini (or similiar) boards. Using 5V would also be possible.
+The SHT31 takes only 1,5 mA (max.) and can easily be powered by the 3.3V from the D1 mini (or similar) boards. Using 5V would also be possible.
 
 --------
 
@@ -105,4 +105,4 @@ Without a calibrated thermometer / hygrometer its hard to tell if the SHT31 meas
 
 But, the SHT31 reacts much quicker to changes of temperature / humidity compared to the Bluetooth / Zigbee connected Xiaomi devices. However, as I'm running the SHT31 sensor without any housing right now, this may change if its put in a case.
 
-All in all, the output looks ok to me. As I bought the sensor already in 2020, the successors SHT4x (SHT41, SHT45, ...) with a better accuracy for a similiar price may be a better option today.
+All in all, the output looks ok to me. As I bought the sensor already in 2020, the successors SHT4x (SHT41, SHT45, ...) with a better accuracy for a similar price may be a better option today.

@@ -12,7 +12,7 @@ Please discuss improvements of this page at the Music Assistant "filesystem" dis
 
 TODO: Rework this section
 
-Music Assistant tries to download artist information automatically from fanart.tv or TheAudioDB. However, the online ressources for this are VERY limited "20 slots per day", so getting artist infos may take a VERY long time. Providing the artist information locally in an artist.nfo file will be available MUCH faster and under your control.
+Music Assistant tries to download artist information automatically from fanart.tv or TheAudioDB. However, the online resources for this are VERY limited "20 slots per day", so getting artist infos may take a VERY long time. Providing the artist information locally in an artist.nfo file will be available MUCH faster and under your control.
 
 MA will use artist.nfo with the "Filesystem (local disk)" and "Filesystem (remote share)" providers. MA will read the artist.nfo file and use some of the data to improve the displayed infos on the corresponding artist page and elsewhere. MA will not write or change the artist.nfo file.
 
@@ -62,7 +62,7 @@ Seems that every program (Music Assistant, Kodi, Jellyfin, ...) supports a diffe
 
 The following lists the tags as documented for Kodi (https://kodi.wiki/view/NFO_files/Artists) to get an overview "what's possible". Tags that are actually used by Music Assistant are highlighted.
 
-| NFO (xml) Tag | Description | Tag Example | Multiple | Music Assistant Support | Notes and Futher Infos |
+| NFO (xml) Tag | Description | Tag Example | Multiple | Music Assistant Support | Notes and Further Infos |
 | --- | --- | --- | --- | --- | --- |
 | **name** | **The name of a Person or Group** | The Beatles | no | **Changes the displayed name (on various pages)** | - |
 | **sortname** | **name as used for sorting** | Beatles, The | no | **Will affect artist list sorting, if "Sort name" is selected** | https://wiki.musicbrainz.org/Style/Artist/Sort_Name |
@@ -73,7 +73,7 @@ The following lists the tags as documented for Kodi (https://kodi.wiki/view/NFO_
 | **genre** | **Genre of the artist** | New Wave | yes | **Shown on artists page (multiple tags possible)** | https://musicbrainz.org/genres MusicBrainz uses all lower chars "new wave" while Kodi example uses "Soft Rock"|
 | style | TODO | Soft Rock | yes | no | Some examples: https://kodi.wiki/view/NFO_files/Templates#artist.nfo_Template |
 | mood | TODO | Nostalgic | yes | no | Some examples: https://kodi.wiki/view/NFO_files/Templates#artist.nfo_Template |
-| yearsactive | Timespan the artist is/was active | "1988 - present" or "1960s - 2010s" | yes | no | - |
+| yearsactive | Time span the artist is/was active | "1988 - present" or "1960s - 2010s" | yes | no | - |
 | instruments | TODO | TODO | yes | no | I couldn't even find an example for this online  |
 | born | Date the Person was born | 1949-05-09 | no | no | only used for Person, not for Group, Orchestra or Choir |
 | formed | First time the band was formed or the artist performed | 1979 | no | no | Example: https://kodi.wiki/view/NFO_files/Templates#artist.nfo_Template |
@@ -82,13 +82,13 @@ The following lists the tags as documented for Kodi (https://kodi.wiki/view/NFO_
 | disbanded | TODO | TODO | no | no | I couldn't even find an example for this online. TODO: Only used for Group, Orchestra or Choir, not for Person? |
 | thumb | Path to available (online) artist images | see example content above | yes | no (TODO: MA only uses local image file in the artist folder?) | Values for aspect attribute (from: https://kodi.wiki/view/NFO_files/Templates#artist.nfo_Template): thumb, clearlogo, clearart, landscape, banner, fanart |
 | path | Path to this file |F:\Music\ArtistInfoKodi\Billy Joel |  no | no | - |
-| album ... | List of artist albums | - | yes | no | Kodi: "Artist discography. A scraped listing not releated to the albums in the library ". I couldn't even find an example for this online |
+| album ... | List of artist albums | - | yes | no | Kodi: "Artist discography. A scraped listing not related to the albums in the library ". I couldn't even find an example for this online |
 
 As you can see, the number of tags supported by Music Assistant are currently pretty limited. Hopefully, this will improve in the future ...
 
 Remarks:
 * If a tag is unknown or doesn't apply, leave the tag empty \<died>\</died> (which I usually do, so I can see what's probably missing) or remove it.
-* Tags for multiple languages or multiple artist.nfo files in different languages are not supported. Thie would be especially useful for the biography text.
+* Tags for multiple languages or multiple artist.nfo files in different languages are not supported. This would be especially useful for the biography text.
 
 Further tag infos:
 

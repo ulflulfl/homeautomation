@@ -1,6 +1,6 @@
 # Wake-on-LAN
 
-Wake-on-LAN (WoL): **Send a "Magic packet" from Home Assistant to remotely wakeup a sleeping computer**
+Wake-on-LAN (WoL): **Send a "Magic packet" from Home Assistant to remotely wake up a sleeping computer**
 
 *State (2023.02): WoL works just fine. WoL for my "Cooler" PC doesn't work -> that machine is just too old*
 
@@ -19,7 +19,7 @@ Two examples:
 * My Esprimo desktop PC takes much less than 1W in standby (20W in idle).
 * My older HP DL380p server takes around 20W even in standby (and around 200W in idle)!
 
-As both machines are only used rarely, I want to reduce permanent power consumption both for environental and cost saving reasons. Set the Esprimo to standby with <1W is ok, but even the standby consumption of the HP server of 20W is too high for the long run. I switch it off completely using a Tuya Mains Plug (with < 1W) when not in use.
+As both machines are only used rarely, I want to reduce permanent power consumption both for environmental and cost saving reasons. Set the Esprimo to standby with <1W is ok, but even the standby consumption of the HP server of 20W is too high for the long run. I switch it off completely using a Tuya Mains Plug (with < 1W) when not in use.
 
 The cost for 1W each year in Nürnberg: 1 W * 24 h * 365 days * 0,4 €/kWh => 3,5 €/year
 
@@ -35,7 +35,7 @@ Setting up Wake-on-LAN can be a bit tricky, some hints:
 
 * Check ALL BIOS settings (usually in a section named "power" or "energy")
 * Check with a native (Windows or Linux) WoL client before trying with HASS or ESPHome if the PC actually wakes up
-* WoL will only work on the same Ethernet/Wifi segment. Router or NAT inbetween may cause problems
+* WoL will only work on the same Ethernet/Wifi segment. Router or NAT in between may cause problems
 
 --------
 

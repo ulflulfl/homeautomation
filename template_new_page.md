@@ -9,15 +9,15 @@ Teaser line **bold important parts**
 
 Features (or technical data):
 * Model: Manufacturer and model number
-* Functions: 
+* Functions:
 * Measured X range: x~y (accuracy: x, resolution: y)
-* Battery: 
+* Battery:
 * Protocol:
-* Dimensions: 
+* Dimensions:
 * DIY: Interface(s):
 * DIY: Supply voltage:
 * DIY: I2C address:
-* DIY: Maximum current: 
+* DIY: Maximum current:
 * ...
 
 Link to Datasheet
@@ -35,7 +35,7 @@ Additional info links:
 
 ### Battery
 
-Battery life: 
+Battery life:
 
 Battery replacement:
 

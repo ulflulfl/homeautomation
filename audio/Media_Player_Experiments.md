@@ -11,7 +11,7 @@ My recently bought Sonos speakers (Ikea Symfonisk Bookshelf Gen.2) currently (20
 * [Ikea Symfonisk Bookshelf Gen.2](https://www.ikea.com/de/de/p/symfonisk-regal-wifi-speaker-weiss-smart-generation-2-50506587/) (Ikea Deutschland)
 * [https://www.music-assistant.io/player-support/sonos/](https://www.music-assistant.io/player-support/sonos/) (Music Assistant: Sonos specific infos)
 
-Initially, the Music Assistant "playbar" wasn't noticing when the speaker is playing something - so I could start a track but couldn't even stop the playing. Reason for this was the firewall (ufw) on the docker container host which "filtered" the notifications from the speaker to Music Assitant.
+Initially, the Music Assistant "playbar" wasn't noticing when the speaker is playing something - so I could start a track but couldn't even stop the playing. Reason for this was the firewall (ufw) on the docker container host which "filtered" the notifications from the speaker to Music Assistant.
 
 These speakers are suitable for kitchen/bathroom but not for intense listening IMHO.
 

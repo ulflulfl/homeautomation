@@ -34,7 +34,7 @@ Aliexpress: 20 € (2023.12)
 
 Why measuring CO2 and what does the measured values mean?
 
-Humans consume oxygen and produce CO2 (beside other things). Without ventilation, breathing humans raise the CO2 level in a room up to the point where people gets dizzy and fatique - or worse. With a single person in a large room this will take several hours or longer, with a lot of persons in a small badly ventilated conference room this can happen real quick. By measuring the CO2 level, the "freshness" of the air can be measured.
+Humans consume oxygen and produce CO2 (beside other things). Without ventilation, breathing humans raise the CO2 level in a room up to the point where people gets dizzy and fatigue - or worse. With a single person in a large room this will take several hours or longer, with a lot of persons in a small badly ventilated conference room this can happen real quick. By measuring the CO2 level, the "freshness" of the air can be measured.
 
 So the CO2 level is a very good indicator when its time to improve the ventilation (aka: open the windows). Of course, other indicators (e.g. humidity) should also be considered.
 
@@ -91,7 +91,7 @@ Connections from the "D1 mini" to the SCD41:
 
 ### Power Supply & Consumption
 
-The SCD41 takes up to 205 mA (peak) and can be powered by the 3.3V from the D1 mini (or similiar) boards. Using 5V would also be possible.
+The SCD41 takes up to 205 mA (peak) and can be powered by the 3.3V from the D1 mini (or similar) boards. Using 5V would also be possible.
 
 --------
 
@@ -131,10 +131,10 @@ The "altitude_compensation" of 309m is the elevation of Nürnberg.
 ## Home Assistant
 
 ```
-TODO: code snippet 
+TODO: code snippet
 ```
 
-TODO: Screenshot 
+TODO: Screenshot
 
 -------------------------
 
@@ -153,7 +153,7 @@ My "temperature references" were:
 | Device | Sensor | Temperature accuracy (typ.) | Example Measurement | Running for ... |
 |--- | --- | --- | --- | --- |
 | Xiaomi LYWSD03MMC | Sensirion SHTV3 | +-0.2 °C | 20.18 "C | about a year |
-| Acara WSDCGQ11LM | Sensirion SHT30 | +-0.2 °C | 20.94 °C | about a year |
+| Aqara WSDCGQ11LM | Sensirion SHT30 | +-0.2 °C | 20.94 °C | about a year |
 | DIY with ESP8266 | Sensirion SHT31 | +-0.2 °C | 20.5 °C | a few days |
 
 A few thoughts what to expect from the datasheet specifications vs. the real world:
@@ -180,7 +180,7 @@ Hint: Calibrating the temperature is NOT needed for the CO2 measurements!
 
 The SCD41 has a specified typical temperature accuracy of +-0.8°C (@15-35 °C), a repeatability of +-0.1°C and a response time of 120s. Interestingly, the typical accuracy is specified, while the maximum isn't!
 
-After running the SCD41 for a day or two, the curve shapes in Home Assistant looked similiar between the "Sensirion SHT references" and the SCD41, but the SCD41 showed permanently about 1.5°C too much. Adjusting the "temperature_offset" in ESPHome from the default 4.0°C to 5.5°C brought it much closer to the SHT31, which is the best temperature reference I currently own.
+After running the SCD41 for a day or two, the curve shapes in Home Assistant looked similar between the "Sensirion SHT references" and the SCD41, but the SCD41 showed permanently about 1.5°C too much. Adjusting the "temperature_offset" in ESPHome from the default 4.0°C to 5.5°C brought it much closer to the SHT31, which is the best temperature reference I currently own.
 
 * TODO: Add the difference between SCD41 and SHT31 after a few more days
 * TODO: Add the difference between SCD41 and SHT45
@@ -213,7 +213,7 @@ There are two ways to calibrate the SCD41.
 
 Hint: ASC is enabled by default.
 
-What these (ASC and other similiar) algorithms automatically do: Look for the lowest measured value of the last few days, expect this to be outside air with 400 ppm and set the calibration accordingly. However, from the SCD41 datasheet: "The ASC algorithm assumes that the sensor is exposed to air with CO2 concentrations of 400 ppm at least once per week". So obviously the ASC will "fail", if the sensor had no contact to fresh air over the last days - the "faulty" ASC calibration will cause the provided CO2 values to be (much) too low.
+What these (ASC and other similar) algorithms automatically do: Look for the lowest measured value of the last few days, expect this to be outside air with 400 ppm and set the calibration accordingly. However, from the SCD41 datasheet: "The ASC algorithm assumes that the sensor is exposed to air with CO2 concentrations of 400 ppm at least once per week". So obviously the ASC will "fail", if the sensor had no contact to fresh air over the last days - the "faulty" ASC calibration will cause the provided CO2 values to be (much) too low.
 
 In fact a day or two after initial setup, the SCD41 values suddenly dropped by ~350 ppm without an obvious external cause (I was sleeping at that time and there was no atmospheric pressure change). I expect this drop to be caused by an SCD41 automatic self calibration. After this "event", the "AirCO2ntrol Mini" constantly shows ~100 ppm more than the SCD41 (before it was 300 ppm less). I'm curious when the "next drop" will happen. This highlights another disadvantage of the ASC: The values will (suddenly) change without a notification.
 

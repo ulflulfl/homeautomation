@@ -1,6 +1,6 @@
 # Connect a Home Assistant Media Player to Music Assistant
 
-The following describes how to prepare Music Assistant so it uses Home Assistant media players (aka: speakers). It uses a speaker build with ESPHome as an example, but the steps for other speakers in Home Assistant should be similiar or identical.
+The following describes how to prepare Music Assistant so it uses Home Assistant media players (aka: speakers). It uses a speaker build with ESPHome as an example, but the steps for other speakers in Home Assistant should be similar or identical.
 
 State (2024.07): My Home Assistant speakers work fine in Music Assistant!
 
@@ -66,7 +66,7 @@ In the appearing *Settings* page you need to enter the URL of the Home Assistant
 
 **Beware that the URL of your Home Assistant will very likely be different than the example below. So the URL will NOT be http://192.168.1.11:8123 for you!**
 
-Note down the URL of your Home Assistant and remove the part with the slashes (for example my Home Assistant dashboard is at: http://192.168.1.11:8123/dashboard-test/home and the URL I need is: http://192.168.1.11:8123). It should also work to you use hostnames instead of IP addresses.
+Note down the URL of your Home Assistant and remove the part with the slashes (for example my Home Assistant dashboard is at: http://192.168.1.11:8123/dashboard-test/home and the URL I need is: http://192.168.1.11:8123). It should also work for you to use hostnames instead of IP addresses.
 
 In the *Generic settings* enter the URL of your Home Assistant and press (RE)AUTHENTICATE HOME ASSISTANT:
 

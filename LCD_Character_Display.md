@@ -12,7 +12,7 @@ Soldering the display and attach some wires is pretty easy. However, programming
 ![LCD 20x4 character display and ESP32, powered by USB](images/LCD_char.jpg)
 *LCD 20x4 character display attached over I2C to an ESP32 with ESPHome firmware*
 
-These character LCDs (based on the Hitachi HD44780 design) are available in different sizes (8x2, 16x2, 20x2, 20x4, ...) and very common for decades now. They usually have a backlight, are pretty cheap and tons of infos can be found on the internet about it. However, displaying graphics is VERY limited and the displays are monochrom only.
+These character LCDs (based on the Hitachi HD44780 design) are available in different sizes (8x2, 16x2, 20x2, 20x4, ...) and very common for decades now. They usually have a backlight, are pretty cheap and tons of infos can be found on the internet about it. However, displaying graphics is VERY limited and the displays are monochrome only.
 
 Further infos:
 https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller
@@ -64,7 +64,7 @@ Hint: The 5V supply pin on the ESP board is marked with different names (VIN, VC
 
 You can connect several I2C devices (not only one LCD) to the I2C bus, just connect the four wires in parallel to the next device. To avoid address conflicts, you can change the I2C address on the PCF board using a solder dot connecting the panels marked A0, A1 and A2 accordingly.
 
-TODO: Write a dedicated I2C page with max. wire lengths, adressing, ...
+TODO: Write a dedicated I2C page with max. wire lengths, addressing, ...
 
 --------------------
 ### ESPHome
@@ -127,7 +127,7 @@ HD44780 character set: http://www.martyncurrey.com/wp-content/uploads/2017/03/LC
 -----------
 ## Optional: Control the Backlight Brightness
 
-You can switch the backlight on and off by calling it.backlight() or it.no_backlight() in the lambda expression of ESPHome. This switches a transistor on the PCF8574 board which pulls the Kathode (Pin 16) of the LCD board to ground. There is also a jumper that connects the Anode to VCC (5V). A typical schematic of the PCF8574 board can be found e.g. at: https://www.sunrom.com/p/i2c-lcd-backpack-pcf8574
+You can switch the backlight on and off by calling it.backlight() or it.no_backlight() in the lambda expression of ESPHome. This switches a transistor on the PCF8574 board which pulls the Cathode (Pin 16) of the LCD board to ground. There is also a jumper that connects the Anode to VCC (5V). A typical schematic of the PCF8574 board can be found e.g. at: https://www.sunrom.com/p/i2c-lcd-backpack-pcf8574
 
 Even at daylight, my display was a bit too bright. I replaced the jumper with a 220 Ohm resistor, which reduces the brightness a bit.
 

@@ -140,7 +140,7 @@ entities:
 
 ## Conclusion
 
-The reported PM values seem to be reasonable to me, although the 10%/25% accuracy isn't very much. Other sensors in that price range have similiar or lower specs (Sensirion SEN54, Cubic PM1006) or don't even provide accuracy infos at all (Plantower PMSxxxx, Nova Fitness SDS011).
+The reported PM values seem to be reasonable to me, although the 10%/25% accuracy isn't very much. Other sensors in that price range have similar or lower specs (Sensirion SEN54, Cubic PM1006) or don't even provide accuracy infos at all (Plantower PMSxxxx, Nova Fitness SDS011).
 
 I wasn't expecting high PM values (non-smoker, no open fireplace, no pets ...) which turned out to be true. In fact, when I open my windows for fresh air, the indoor PM values are slightly going up.
 

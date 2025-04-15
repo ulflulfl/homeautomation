@@ -60,7 +60,7 @@ Other important air quality indicators for indoor rooms are NOT measured:
 * TVOC: smells (TODO: Important?)
 * CO: result of burning (gas oven, ...), high levels can be very dangerous
 
-TODO: Add an air quality overview page 
+TODO: Add an air quality overview page
 
 ### Power Consumption
 
@@ -91,7 +91,7 @@ As there is some room in the case and some pins at the ESP left, other sensors (
 
 The VINDRIKTNING consist of two main parts, a microcontroller controlling the LED traffic light and the Cubic PM1006 PM 2.5 sensor itself. Both communicate via a serial "UART" connection using 9600 baud.
 
-To get the PM 2.5 measurement data, a Wemos Di mini running ESPHome is added that passively listens to the serial data coming from the sensor and provides that data via WiFi to Home Assistant. The control of the PM1006 sensor (e.g. initialisation) is still done by the VINDRIKTNING controller. There are instructions on the internet where the ESP8266 takes full control over the sensor, but I haven't tried that.
+To get the PM 2.5 measurement data, a Wemos Di mini running ESPHome is added that passively listens to the serial data coming from the sensor and provides that data via WiFi to Home Assistant. The control of the PM1006 sensor (e.g. initialization) is still done by the VINDRIKTNING controller. There are instructions on the internet where the ESP8266 takes full control over the sensor, but I haven't tried that.
 
 The fan runs on 5V and the VINDRIKTNING controller switches the ground side off cyclically every few seconds. Cutting the fans 5V line and connect it to 3.3 V from the ESP8266 board creates silence, but the fan is still running :-)
 

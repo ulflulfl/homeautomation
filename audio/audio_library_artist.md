@@ -14,7 +14,7 @@ Please discuss improvements of this page at the Music Assistant "filesystem" dis
 
 Music Assistant tries to download artist information automatically from fanart.tv or TheAudioDB.
 
-**The online ressources for MA automatic downloads are VERY limited by the online databases "20 slots per day", so getting artist infos automatically often takes a VERY long time (if it works at all).**
+**The online resources for MA automatic downloads are VERY limited by the online databases "20 slots per day", so getting artist infos automatically often takes a VERY long time (if it works at all).**
 
 When I set up my audio library it felt a bit like a lottery. Even after a few days of usage, I got less than 10 out of 100 artists with a picture and some biography text.
 
@@ -67,7 +67,7 @@ As long as the image file is placed in the right artist folder, the actual file 
 
 Finding the image file is probably based on the file extension. I've successfully used the file extensions: .jpg, .jpeg, .png and .gif (others: bmp and webm are not supported)
 
-The image should have a square ratio (roughly, TODO: otherwise it will be croppped?).
+The image should have a square ratio (roughly, TODO: otherwise it will be cropped?).
 
 TODO: If multiple image files exist in the folder, which one is used?
 

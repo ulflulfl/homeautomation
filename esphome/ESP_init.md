@@ -1,10 +1,10 @@
 # ESP Init for ESPHome
 
-How to initialise an ESP32 or ESP8266 board with USB for first use with ESPHome.
+How to initialize an ESP32 or ESP8266 board with USB for first use with ESPHome.
 
 You wil need:
 
-* an ESP board to be initialised
+* an ESP board to be initialized
 * Windows, Linux or MacOS computer (the text below was only tested with Windows)
 * a free USB port on the computer
 * a suitable USB cable
@@ -49,7 +49,7 @@ Once the connection was established, press PREPARE FOR FIRST USE
 
 ![web.esphome.io_installing.png](images/web.esphome.io_installing.png)
 
-If eveything works well, the install will finish successfully, press CLOSE
+If everything works well, the install will finish successfully, press CLOSE
 
 ![web.esphome.io_installed.png](images/web.esphome.io_installed.png)
 
@@ -71,7 +71,7 @@ After a few seconds connecting, you'll see: Provisioned!
 
 You can CLOSE the dialog.
 
-From here you can connect ESPHome to the ESP using WiFi. The USB cable is now only needed for power supply or if you need to reinitialise the ESP if some configuration went real bad.
+From here you can connect ESPHome to the ESP using WiFi. The USB cable is now only needed for power supply or if you need to reinitialize the ESP if some configuration went real bad.
 
 ## ESPHome
 
@@ -91,7 +91,7 @@ Once the adopt step has finished, press INSTALL for an initial ESPHome installat
 
 ![esphome_configuration_created.png](images/esphome_configuration_created.png)
 
-The install will first compile the firmware, downloads it to the ESP and then shows inital log output from the ESP (this will take a minute or two)
+The install will first compile the firmware, downloads it to the ESP and then shows initial log output from the ESP (this will take a minute or two)
 
 ![esphome_bootlog.png](images/esphome_bootlog.png)
 
@@ -221,7 +221,7 @@ TODO: Can't remember: What is the right sequence of changing the yaml, setting i
 
 Optional: Add static IP and DNS for ease of use.
 
-I'm using IPFire to provide DHCP and DNS services, you can probably do similiar with pfSense or openSense.
+I'm using IPFire to provide DHCP and DNS services, you can probably do similar with pfSense or openSense.
 
 The following steps are for the specific ESP device. I won't go into the general IPFire setup here:
 

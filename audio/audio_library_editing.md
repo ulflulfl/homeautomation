@@ -27,7 +27,7 @@ Before I started to edit any files, I made a backup so I can go back if somethin
 ## Audacity
 [Audacity](https://www.audacityteam.org/) is a multi platform open source desktop tool intended for audio editing. It can also be used to extract the audio from video files. If "[ffmpeg for Audacity](https://support.audacityteam.org/basics/installing-ffmpeg)" is installed, you can convert the audio tracks of videos to audio files.
 
-I just drag-n-drop the video file to Audacity, the Import takes a few seconds up to a minute, depending on the file size. Then I export the audio file (Menu: File > Audio Export) and set the Format to "FLAC", the export takes a similiar time.
+I just drag-n-drop the video file to Audacity, the Import takes a few seconds up to a minute, depending on the file size. Then I export the audio file (Menu: File > Audio Export) and set the Format to "FLAC", the export takes a similar time.
 
 I use it to convert mkv, mp4 and webm to flac files. I'm still unsure if this is the best way to convert videos to audio files, but at least it works reasonably well.
 

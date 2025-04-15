@@ -99,7 +99,7 @@ Most devices should be very safe to use as they run with batteries, low voltages
 * [Sensirion "SCD41"](Sensirion_SCD41.md) - DIY CO2, temperature & humidity sensor (ESP & SCD41) - Wifi
 * [Sensirion "SGP30"](Sensirion_SGP30.md) - DIY TVOC and eCO2 sensor (ESP & SGP30) - Wifi
 * [Sensirion "SPS30"](Sensirion_SPS30.md) - DIY PM1, PM2.5, PM4 and PM10 sensor (ESP & SPS30) - Wifi
-* TODO: TFA Doostmann "AirCO2ntrol mini" - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
+* TODO: TFA Dostmann "AirCO2ntrol mini" - DIY CO2 sensor (ESP & AirCO2ntrol) - Wifi
 * <s>["BMP280"](BMP280.md) - DIY air pressure & temperature sensor (ESP & BMP280) - Wifi</s> - unused
 * <s>[Inkbird IBS-TH1 Plus](Inkbird_IBS-TH1_Plus.md) - temperature & humidity sensor with LCD - BLE</s> - fail, due to unreliable data transfer!
 
